@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        if(n > 80)
+        if(n >= 80)
             System.out.print("pass");
         else
             System.out.printf("%d more score", 80 - n);
