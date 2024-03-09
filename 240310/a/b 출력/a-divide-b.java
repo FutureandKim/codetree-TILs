@@ -14,6 +14,7 @@ public class Main {
             }
         } else{
             System.out.printf("%d.", a/b);
+            a %= b;
             for(int i = 0; i < 20; i++){
                 System.out.print((a*10)/b);
                 a = (a*10) % b;
