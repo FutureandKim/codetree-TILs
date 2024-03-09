@@ -7,6 +7,6 @@ public class Main {
         int b = sc.nextInt();
 
         for(int i = b; i >= a; i--)
-            System.out.print("%d ", i);
+            System.out.printf("%d ", i);
     }
 }
