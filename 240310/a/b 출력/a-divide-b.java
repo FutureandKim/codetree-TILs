@@ -6,9 +6,7 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        double res = (double) a / (double) b;
-        
-        System.out.print("0.");
+        System.out.printf("%d.", a/b);
         for(int i = 0; i < 20; i++){
             System.out.print((a*10)/b);
             a = (a*10)%b;
