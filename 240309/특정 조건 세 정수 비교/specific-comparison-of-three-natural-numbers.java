@@ -7,7 +7,8 @@ public class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-        System.out.print(a <= b && a <= c ? 1: 0 + " ");
+        System.out.print(a <= b && a <= c ? 1: 0);
+        System.out.print(" ");
         System.out.print(a == b && b==c ? 1 : 0);
     }
 }
