@@ -13,12 +13,9 @@ public class Main {
                 a = (a*10) % b;
             }
         } else{
+            System.out.printf("%d.", a/b);
             for(int i = 0; i < 20; i++){
-                if (i == 0) 
-                    System.out.printf("%d.", (a*10)/b);
-                else{
-                    System.out.print((a*10)/b);
-                }
+                System.out.print((a*10)/b);
                 a = (a*10) % b;
             }
         }
