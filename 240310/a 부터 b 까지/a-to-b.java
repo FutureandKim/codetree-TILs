@@ -13,7 +13,11 @@ public class Main {
                 n *= 2;
             else
                 n += 3;
-            System.out.printf("%d ", n);
+
+            if(n > b)
+                System.out.print("");
+            else
+                System.out.printf("%d ", n);
 
         }
     }
