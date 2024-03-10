@@ -7,18 +7,13 @@ public class Main {
         int b = sc.nextInt();
         int n = a;
 
-        System.out.print(a + " ");
-        while(n < b){
+        while(n <= b){
+            System.out.printf("%d ", n);
+
             if(n % 2 == 1)
                 n *= 2;
             else
                 n += 3;
-
-            if(n > b)
-                System.out.print("");
-            else
-                System.out.printf("%d ", n);
-
         }
     }
 }
