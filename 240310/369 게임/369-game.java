@@ -10,7 +10,12 @@ public class Main {
                 System.out.printf("%d ", 0);
             }else if(i <= 10){
                 System.out.printf("%d ", i);
-            } else {
+            }else if(i % 10 == 0){
+                if((i/10)%3 == 0)
+                    System.out.printf("%d ", 0);
+                else
+                    System.out.printf("%d ", i); 
+            }else {
                 if((i / 10) % 3 == 0 || (i % 10) % 3 == 0)
                     System.out.printf("%d ", 0);
                 else
