@@ -6,10 +6,7 @@ public class Main {
         int n = sc.nextInt();
         boolean res = false;
 
-        for(int i = 1; i < n; i++){
-            if(i == 1)
-                continue;
-
+        for(int i = 2; i < n; i++){
             if(n % i == 0)
                 res = true;
         }
