@@ -8,9 +8,12 @@ public class Main {
 
         while(n > 1){
             n /= cnt;
+            if(n <= 1){
+                System.out.print(cnt);
+                break;
+            }
             cnt++;
+        
         }
-
-        System.out.print(cnt-1);
     }
 }
