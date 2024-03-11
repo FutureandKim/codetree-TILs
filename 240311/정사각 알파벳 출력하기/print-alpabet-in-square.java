@@ -6,7 +6,7 @@ public class Main {
         int n = sc.nextInt();
 
         for(int i = 1; i <= n*n; i++){
-            if(i % 3 == 0)
+            if(i % n == 0)
                 System.out.printf("%c\n", (char)(i+64));
             else
                 System.out.print((char)(i+64));
