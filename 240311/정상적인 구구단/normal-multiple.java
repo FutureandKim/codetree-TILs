@@ -7,7 +7,7 @@ public class Main {
 
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= n; j++)
-                if(j == 3)
+                if(j == n)
                     System.out.printf("%d * %d = %d", i, j, i*j);
                 else
                     System.out.printf("%d * %d = %d, ", i, j, i*j);
