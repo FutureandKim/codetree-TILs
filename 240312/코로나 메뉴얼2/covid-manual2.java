@@ -28,7 +28,7 @@ public class Main {
 
         for(int i = 1; i <= 4; i++){ // 진료소 기준 for문
             int num = 0;
-            for(int j = 0; j < 3; j++){ // 각 환자들이 어디 진료소에 배정되었는지 for문
+            for(int j = 0; j < 3; j++){ // 각 환자들이 어디 진료소에 배정되었는지에 대한 for문
                 if(c[j] == i)
                     num++;
             }
