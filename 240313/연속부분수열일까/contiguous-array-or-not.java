@@ -34,13 +34,14 @@ public class Main {
         if(res == true) {
             for(int j = idx_a; j < (idx_a+n2); j++){
                 //System.out.printf("%d %d\n", j, idx_b);
-                
                 if(a[j] != b[idx_b]){
                     System.out.print("No");
                     res = false;
                     break;
                 }
                 idx_b++;
+                if(idx_b == n2-1)
+                    break;
             }
         }
         if(res == true)
