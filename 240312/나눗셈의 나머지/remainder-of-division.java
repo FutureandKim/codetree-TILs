@@ -9,10 +9,10 @@ public class Main {
         int i, sum = 0;
 
         for(i = 0; i < 10; i++){
-            int res = a % b;
-            a /= b;
+            int res = a % b; // 배열에 저장할 값(나눗셈의 나머지)
+            a /= b; // 나눗셈 반복
             arr[i] = res;
-            if(a <= 1)
+            if(a <= 1) // a가 1 이하가 되면 for문 중지
                 break;
         }
 
