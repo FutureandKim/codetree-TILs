@@ -8,7 +8,7 @@ public class Main {
         for(int i = 0; i < 10; i++){
             arr[i] = sc.nextInt();
             if(arr[i] == 0){
-                for(int j = 0; j <= i-1; j++)
+                for(int j = 0; j < i; j++)
                     System.out.printf("%d ", arr[(i-1)-j]);
                 break;
             }
