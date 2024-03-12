@@ -16,5 +16,6 @@ public class Main {
             }
             System.out.printf("%d - %d\n", i, cnt);
         }
+        sc.close();
     }
 }
