@@ -14,10 +14,12 @@ public class Main {
         for(int i = 0; i < q; i++){
             int qnum = sc.nextInt(); // 질의 번호
             int a = 0, b = 0;
+
             if(qnum == 1){
                 a = sc.nextInt();
                 System.out.println(arr[a-1]);
-            } else if(qnum == 2){
+            } 
+            else if(qnum == 2){
                 a = sc.nextInt();
                 int cnt = -1;
                 for(int j = 0; j < n; j++){
@@ -29,7 +31,8 @@ public class Main {
                 }
                 if(cnt == -1)
                     System.out.println(0);
-            } else if(qnum == 3){
+            } 
+            else if(qnum == 3){
                 a = sc.nextInt();
                 b = sc.nextInt();
                 for(int j = a-1; j < b; j++)
