@@ -14,8 +14,8 @@ public class Main {
             cnt++;
         }
 
-        for(int i = 0; i < cnt; i++)
-            System.out.printf("%d ", arr[(cnt-1)-i]);
+        for(int i = 1; i < cnt; i++)
+            System.out.printf("%d ", arr[cnt-i]);
 
 
 
