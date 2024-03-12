@@ -32,7 +32,7 @@ public class Main {
             } else if(qnum == 3){
                 a = sc.nextInt();
                 b = sc.nextInt();
-                for(int j = a-1; j < b; j++)
+                for(int j = a-1; j <= b; j++)
                     System.out.printf("%d ", arr[j]);
             }
         }
