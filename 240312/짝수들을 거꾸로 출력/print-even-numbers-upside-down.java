@@ -9,7 +9,7 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             a = sc.nextInt();
-            if(a % 2 == 0){
+            if(a % 2 == 0){ // 짝수만 배열에 저장
                 arr[cnt] = a;
                 cnt++;   
             }
