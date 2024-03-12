@@ -11,5 +11,6 @@ public class Main {
             a[i] *= a[i];
             System.out.printf("%d ", a[i]);
         }
+        sc.close();
     }
 }
