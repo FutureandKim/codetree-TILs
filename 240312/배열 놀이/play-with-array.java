@@ -34,6 +34,7 @@ public class Main {
                 b = sc.nextInt();
                 for(int j = a-1; j <= b; j++)
                     System.out.printf("%d ", arr[j]);
+                    System.out.println();
             }
         }
         sc.close();
