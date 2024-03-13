@@ -12,9 +12,8 @@ public class Main {
             arr[i] = sc.nextInt();
             if(arr[i] > max){
                 max = arr[i];
-                int temp = arr[0];
-                arr[0] = arr[i];
-                arr[i] = temp;
+                arr[i] = arr[0];
+                arr[0] = max;
             }
         }
 
