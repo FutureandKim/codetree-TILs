@@ -8,16 +8,20 @@ public class Main {
 
         arr[0] = sc.nextInt();
         int max = arr[0];
+        int max2 = Integer.MIN_VALUE;
+
+        // 최대값 찾기 위한 for문
         for(int i = 1; i < n; i++){
             arr[i] = sc.nextInt();
             if(arr[i] > max){
                 max = arr[i];
-                arr[i] = arr[0];
-                arr[0] = max;
+                arr[i] = arr[0]; // 최대값과 arr[0] 위치 바꿈
+                arr[0] = max; 
             }
         }
 
-        int max2 = Integer.MIN_VALUE;
+        // arr[0]은 최대값이므로 
+        // arr[1]부터 for문 진행하여 두번째로 큰 수 찾기
         for(int i = 1; i < n; i++){
             if(arr[i] > max2)
                 max2 = arr[i];
