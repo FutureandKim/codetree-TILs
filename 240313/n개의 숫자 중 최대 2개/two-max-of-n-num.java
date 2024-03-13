@@ -20,7 +20,7 @@ public class Main {
             }
         }
 
-        // arr[0]은 최대값이므로 
+        // arr[0]은 최대값이므로 제외하고,
         // arr[1]부터 for문 진행하여 두번째로 큰 수 찾기
         for(int i = 1; i < n; i++){
             if(arr[i] > max2)
