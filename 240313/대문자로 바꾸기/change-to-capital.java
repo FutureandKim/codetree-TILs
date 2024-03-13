@@ -11,7 +11,7 @@ public class Main {
                 System.out.printf("%c ", (int)c-32);
             }
             System.out.println();
-            sc.close();
         }
+        sc.close();
     }
 }
