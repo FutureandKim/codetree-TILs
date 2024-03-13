@@ -16,10 +16,8 @@ public class Main {
 
         int max2 = arr[0];
         for(int i = 1; i < n; i++){
-            if(arr[i] != max){
-                if(arr[i] > max2 && arr[i] < max)
-                    max2 = arr[i];
-            }
+            if(arr[i] > max2 && arr[i] < max)
+                max2 = arr[i];
         }
         System.out.printf("%d %d", max, max2);
 
