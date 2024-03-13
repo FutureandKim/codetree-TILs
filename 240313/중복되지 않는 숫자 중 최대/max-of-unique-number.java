@@ -5,6 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
+        int[] cnt = new int[1001];
         int max = -1;
 
         for(int i = 0; i < n; i++)
@@ -13,13 +14,17 @@ public class Main {
         for(int i = 0; i < n; i++){
             for(int j = i+1; j < n; j++){
                 if(arr[i] == arr[j]){
-                    arr[i] = arr[j] = -1;
+                    cnt[arr[i]] += 1;
                 }
             }
-            if(arr[i] > max)
+            //System.out.printf("%d ", arr[i]);
+        }
+
+        for(int i = 0; i < n; i++){
+            if(cnt[arr[i]] == 0 && arr[i] > max)
                 max = arr[i];
         }
-        System.out.print(max);
+        System.out.println(max);
         sc.close();        
     }
 }
