@@ -10,13 +10,17 @@ public class Main {
         int max = arr[0];
         for(int i = 1; i < n; i++){
             arr[i] = sc.nextInt();
-            if(arr[i] > max)
+            if(arr[i] > max){
                 max = arr[i];
+                int temp = arr[0];
+                arr[0] = arr[i];
+                arr[i] = temp;
+            }
         }
 
         int max2 = Integer.MIN_VALUE;
-        for(int i = 0; i < n; i++){
-            if(arr[i] > max2 && arr[i] < max)
+        for(int i = 1; i < n; i++){
+            if(arr[i] > max2)
                 max2 = arr[i];
         }
         System.out.printf("%d %d", max, max2);
