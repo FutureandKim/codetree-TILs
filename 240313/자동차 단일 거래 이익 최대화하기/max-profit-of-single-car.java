@@ -11,9 +11,15 @@ public class Main {
             arr[i] = sc.nextInt();
 
         for(int i = 0; i < n; i++){
-            for(int j = i+1; j < n; j++){
-                if(arr[j] - arr[i] > 0 && arr[j] - arr[i] > max)
-                    max = arr[j] - arr[i];
+            if(n == 1){
+                max = arr[0];
+                break;
+            }
+            else{
+                for(int j = i+1; j < n; j++){
+                    if(arr[j] - arr[i] > 0 && arr[j] - arr[i] > max)
+                        max = arr[j] - arr[i];
+                }
             }
         }
         System.out.print(max);
