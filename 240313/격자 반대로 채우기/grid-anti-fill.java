@@ -7,12 +7,23 @@ public class Main {
         int[][] arr = new int[n][n];
         int cnt = n*n;
 
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < n; j++){
-                if(i % 2 == 0)
-                    arr[(n-1)-j][i] = cnt--;
-                else
-                    arr[j][i] = cnt--;
+        if(n % 2 == 0){
+            for(int i = 0; i < n; i++){
+                for(int j = 0; j < n; j++){
+                    if(i % 2 == 0)
+                        arr[(n-1)-j][i] = cnt--;
+                    else
+                        arr[j][i] = cnt--;
+                }
+            }
+        } else{
+            for(int i = 0; i < n; i++){
+                for(int j = 0; j < n; j++){
+                    if(i % 2 != 0)
+                        arr[(n-1)-j][i] = cnt--;
+                    else
+                        arr[j][i] = cnt--;
+                }
             }
         }
 
