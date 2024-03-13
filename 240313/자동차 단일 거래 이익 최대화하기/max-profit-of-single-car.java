@@ -12,7 +12,7 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             for(int j = i+1; j < n; j++){
-                if(arr[j] - arr[i] != 0 && arr[j] - arr[i] > max)
+                if(arr[j] - arr[i] > 0 && arr[j] - arr[i] > max)
                     max = arr[j] - arr[i];
             }
         }
