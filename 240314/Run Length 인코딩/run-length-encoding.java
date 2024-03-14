@@ -18,8 +18,10 @@ public class Main {
                 cnt++;
             }
         }
-        
+
+        // 마지막 cnt 처리
         str = str + cnt;
+
         System.out.printf("%d\n%s", str.length(), str);
         sc.close();
     }
