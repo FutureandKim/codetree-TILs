@@ -17,10 +17,9 @@ public class Main {
             } else {
                 cnt++;
             }
-            if(i == a.length()-1)
-                str = str + cnt;
         }
-
+        
+        str = str + cnt;
         System.out.printf("%d\n%s", str.length(), str);
         sc.close();
     }
