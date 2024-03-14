@@ -6,7 +6,11 @@ public class Main {
         String str = sc.nextLine();
         int n = sc.nextInt();
 
-        for(int i = 0; i < n; i++)
-            System.out.print(str.charAt(str.length()-1-i));
+        for(int i = 0; i < n; i++){
+            int num = str.length()-1-i;
+            System.out.print(str.charAt(num));
+            if(num == 0)
+                break;
+        }
     }
 }
