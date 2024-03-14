@@ -8,9 +8,9 @@ public class Main {
         int[][] arr = new int[n][n];
 
         for(int i = 0; i < m; i++){
-            int r = sc.nextInt() - 1;
-            int c = sc.nextInt() - 1;
-            arr[r][c] = r * c;
+            int r = sc.nextInt();
+            int c = sc.nextInt();
+            arr[r-1][c-1] = r * c;
         }
 
         for(int i = 0; i < n; i++){
