@@ -15,7 +15,7 @@ public class Main {
         }
 
         if(idx == -1)
-            System.out.print("no");
+            System.out.print("No");
         else
             System.out.print(idx);
     }
