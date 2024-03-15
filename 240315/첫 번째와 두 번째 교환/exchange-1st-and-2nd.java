@@ -9,15 +9,11 @@ public class Main {
 
         for(int i = 0; i < arr.length; i++){
             if(arr[i] == first)
-                arr[i] = '1';
-            if(arr[i] == second)
+                arr[i] = second;
+            else if(arr[i] == second)
                 arr[i] = first;
         }
 
-        for(int i = 0; i < arr.length; i++){
-            if(arr[i] == '1')
-                arr[i] = second;
-        }
         String res = String.valueOf(arr);
         System.out.print(res);
     }
