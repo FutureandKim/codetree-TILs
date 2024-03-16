@@ -18,6 +18,8 @@ public class Main {
     // 소수 판별 함수
     public static boolean isPrime(int n) {
         
+        if(n == 1) return false;
+        
         for(int i = 2; i < n; i++)
             if(n % i == 0)
                 return false;
