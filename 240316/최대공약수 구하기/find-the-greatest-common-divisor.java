@@ -17,7 +17,7 @@ public class Main {
         if(n > m){
             int temp = m;
             m = n;
-            n = m;
+            n = temp;
         } 
         
         for(int i = 1; i <= n; i++){
