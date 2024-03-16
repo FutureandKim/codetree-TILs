@@ -12,7 +12,7 @@ public class Main {
                 else
                     System.out.print(str.charAt(i));
             }
-            else if(str.charAt(i) >= 48 && str.charAt(i) <= 57)
+            else if(str.charAt(i) >= '0' && str.charAt(i) <= '9')
                 System.out.print(str.charAt(i));
         
         }
