@@ -8,6 +8,6 @@ public class Main {
         if(c == 'z')
             System.out.print('a');
         else
-            System.out.print((char)((int)c+1));
+            System.out.print((char)(c+1));
     }
 }
