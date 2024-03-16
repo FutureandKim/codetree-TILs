@@ -26,7 +26,7 @@ public class Main {
             }
         }
 
-        int res = idx * (n/idx) * (m/idx);
+        int res = (n*m)/idx;
         System.out.print(res);
     }
 }
