@@ -16,6 +16,6 @@ public class Main {
     // 짝수인지 확인하는 함수
     public static boolean isMultipleFive(int n) {
         int res = (n/10) + (n%10);
-        return res % 5 == 0 && res % 2 == 0;
+        return res % 5 == 0 && n % 2 == 0;
     }
 }
