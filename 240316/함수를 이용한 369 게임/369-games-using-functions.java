@@ -20,8 +20,8 @@ public class Main {
 
     // 숫자에 3, 6, 9가 있는지 확인하는 함수
     public static boolean isContain369(int n) {
-        int ten = n / 10;
-        int one = n % 10;
-        return ten == 3 || ten == 6 || ten == 9 || one == 3 || one == 6 || one == 9; 
+        String str = Integer.toString(n);
+        
+        return (str.contains("3") || str.contains("6") || str.contains("9"));
     }
 }
