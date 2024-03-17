@@ -21,6 +21,9 @@ public class Main {
                     if(d >= 1 && d <= 30)
                         return true;
                 }
+            } else {
+                if(d >= 1 && d <= 31)
+                    return true;
             }
         } else if(m <= 12){
             if(m % 2 == 0){
