@@ -17,7 +17,7 @@ public class Main {
                 return true;
         }
 
-        if(m <= 7){
+        if(m >= 1 && m <= 7){
             if(m % 2 == 0){
                 if(d >= 1 && d <= 30)
                     return true;
@@ -26,7 +26,7 @@ public class Main {
                 if(d >= 1 && d <= 31)
                     return true;
             }
-        } else{
+        } else if(m <= 12){
             if(m % 2 == 0){
                 if(d >= 1 && d <= 31)
                     return true;
