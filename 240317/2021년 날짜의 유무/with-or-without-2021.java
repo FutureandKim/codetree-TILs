@@ -12,24 +12,27 @@ public class Main {
 
     // 날짜 유무 판별 함수
     public static boolean isDate(int m, int d){
-        if(m >= 1 && m <= 7){
-            if(m % 2 == 0) {
-                if(m == 2){
-                    if(d >= 1 && d <= 28)
-                        return true;
-                } else {
-                    if(d >= 1 && d <= 30)
-                        return true;
-                }
-            } else {
+        if(m == 2){
+            if(d >= 1 && d <= 28)
+                return true;
+        }
+
+        if(m <= 7){
+            if(m % 2 == 0){
+                if(d >= 1 && d <= 30)
+                    return true;
+            }
+            else{
                 if(d >= 1 && d <= 31)
                     return true;
             }
-        } else if(m <= 12){
+        } else{
             if(m % 2 == 0){
                 if(d >= 1 && d <= 31)
                     return true;
-                else if(d >= 1 && d <= 30)
+            }
+            else{
+                if(d >= 1 && d <= 31)
                     return true;
             }
         }
