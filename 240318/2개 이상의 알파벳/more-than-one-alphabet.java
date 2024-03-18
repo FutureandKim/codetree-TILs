@@ -20,9 +20,9 @@ public class Main {
         }
 
         for(int i = 0; i < 26; i++){
-            if(i > 1)
-                return true;
+            if(alphabet[i] == str.length())
+                return false;
         }
-        return false;
+        return true;
     }
 }
