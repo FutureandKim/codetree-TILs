@@ -11,11 +11,13 @@ public class Main {
         for(int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
 
+        // 오름차순
         Arrays.sort(arr);
         for(int i = 0; i < n; i++)
             System.out.printf("%d ", arr[i]);
         System.out.println();
 
+        // 내림차순
         Arrays.sort(arr, Collections.reverseOrder());
         for(int i = 0; i < n; i++)
             System.out.printf("%d ", arr[i]);
