@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static int n;
-    public static int[] arr = new int[100]; 
+    public static int[] arr = new int[101]; 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
