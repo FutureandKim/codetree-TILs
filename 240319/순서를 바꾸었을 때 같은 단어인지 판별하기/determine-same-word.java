@@ -8,16 +8,20 @@ public class Main {
         String s2 = sc.next();
         char[] c1 = s1.toCharArray();
         char[] c2 = s2.toCharArray();
-        boolean same = true;
+        boolean same = false;
 
         Arrays.sort(c1);
         Arrays.sort(c2);
 
-        for(int i = 0; i < c1.length; i++){
-            if(c1[i] != c2[i]){
-                same = false;
-                break;
-            }
+        String sortedS1 = new String(c1);
+        String sortedS2 = new String(c2);
+
+        if(sortedS1.length() > sortedS2.length()){
+            if(sortedS1.contains(sortedS2))
+                same = true;
+        } else{
+            if(sortedS2.contains(sortedS1))
+                same = true;
         }
         System.out.print(same ? "Yes" : "No");
     }
