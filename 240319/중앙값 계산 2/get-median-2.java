@@ -9,8 +9,8 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
-            if(i % 2 == 0){
-                Arrays.sort(arr, 0, i);
+            if((i+1) % 2 != 0){
+                Arrays.sort(arr, 0, i+1);
                 System.out.print(arr[i/2] + " ");
             }
         }
