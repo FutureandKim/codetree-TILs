@@ -13,10 +13,11 @@ public class Main {
 
         Arrays.sort(arr);
 
+        // 정렬된 arr의 양 끝 값 그룹지어서 합해줌
         for(int i = 0; i < n; i++)
             group[i] = arr[i] + arr[(2*n)-1-i];
 
         Arrays.sort(group);
-        System.out.print(group[n-1]);
+        System.out.print(group[n-1]); // group에서 가장 큰 값 출력
     }
 }
