@@ -12,7 +12,12 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             String str = sc.next();
-            if(str.contains(t)){
+            boolean res = true;
+            for(int j = 0; j < t.length(); j++){
+                if(str.charAt(j) != t.charAt(j))
+                    res = false;
+            }
+            if(res){
                 arr[cnt] = str;
                 cnt++;
             }
