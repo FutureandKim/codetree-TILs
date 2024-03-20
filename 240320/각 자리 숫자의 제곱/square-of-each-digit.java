@@ -12,6 +12,6 @@ public class Main {
     public static int square(int n){
         if(n < 10)
             return n*n;
-        return square((n-1)/10) + (n%10) * (n%10);
+        return square(n/10) + (n%10) * (n%10);
     }
 }
