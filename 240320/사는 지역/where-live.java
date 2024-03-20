@@ -6,7 +6,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         Address[] a = new Address[n];
-        String[] nameList = new String[n];
+        String[] nameList = new String[n]; // 이름 정렬을 위한 배열
 
         for(int i = 0; i < n; i++){
             String name = sc.next();
@@ -16,6 +16,7 @@ public class Main {
             nameList[i] = name;
         }
 
+        // 알파벳 순으로 이름 정렬
         Arrays.sort(nameList);
         for(int i = 0; i < n; i++)
             if(nameList[n-1] == a[i].name){
