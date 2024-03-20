@@ -7,7 +7,7 @@ public class Main {
         char place = sc.next().charAt(0);
         int time = sc.nextInt();
         SecretCode s1 = new SecretCode(code, place, time);
-        System.out.printf("secret code : %s\nmeeting point : %c\ntime : %d", code, place, time);
+        System.out.printf("secret code : %s\nmeeting point : %c\ntime : %d", s1.code, s1.place, s1.time);
     }
 }
 
