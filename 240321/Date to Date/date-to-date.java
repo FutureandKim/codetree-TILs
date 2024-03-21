@@ -28,6 +28,9 @@ public class Main {
                 to += 30;
             }
         }
-        System.out.print(to-from);
+        if(to == from)
+            System.out.print(1);
+        else   
+            System.out.print(to-from);
     }
 }
