@@ -7,8 +7,10 @@ public class Main {
         int d1 = sc.nextInt();
         int m2 = sc.nextInt();
         int d2 = sc.nextInt();
+        String aDay = sc.next();
         int from = d1, to = d2;
-        String[] day = new String[]{ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+        String[] days = new String[]{ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+        int idx = 0;
     
         for(int i = 1; i < m1; i++){
             if(i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12)
@@ -28,6 +30,14 @@ public class Main {
                 to += 30;
         }
 
-        System.out.print((to-from)/7 + 1);
+        for(int i = 0; i < 7; i++){
+            if(days[i].equals(aDay))
+                idx = i;
+        }
+
+        if((to-from)%7 < idx)
+            System.out.print((to-from)/7);
+        else
+            System.out.print((to-from)/7 + 1);
     }
 }
