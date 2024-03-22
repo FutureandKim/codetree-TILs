@@ -19,6 +19,7 @@ public class Main {
 
         int[] digit = new int[cnt];
 
+        // n의 각 자리수 digit배열에 저장
         for(int i = cnt-1; i >= 0; i--){
             digit[i] = (n%10);
             n /= 10;
