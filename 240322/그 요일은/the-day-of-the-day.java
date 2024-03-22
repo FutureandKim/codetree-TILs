@@ -30,6 +30,7 @@ public class Main {
                 to += 30;
         }
 
+        // A요일의 idx 찾기
         for(int i = 0; i < 7; i++){
             if(days[i].equals(aDay))
                 idx = i;
