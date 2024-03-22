@@ -10,8 +10,12 @@ public class Main {
         for(int i = 0; i < k; i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
-            for(int j = a-1; j < b; j++)
-                blockNum[j] += 1;
+            if(a==b)
+                blockNum[a-1] += 1;
+            else{
+                for(int j = a-1; j < b; j++)
+                    blockNum[j] += 1;
+            }
         }
 
         int max = -1;
