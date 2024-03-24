@@ -11,16 +11,18 @@ public class Main {
         for(int i = 0; i < n; i++)
             numArr[i] = sc.nextInt();
 
-
-        for(int i = 1; i < n; i++){
-            if(numArr[i] == numArr[i-1])
-                cnt++;
-            if(i == n-1 || numArr[i] != numArr[i-1]){
-                cont[idx++] = cnt;
-                cnt = 1;
+        if(n == 1)
+            cont[0] = 1;
+        else{
+            for(int i = 1; i < n; i++){
+                if(numArr[i] == numArr[i-1])
+                    cnt++;
+                if(i == n-1 || numArr[i] != numArr[i-1]){
+                    cont[idx++] = cnt;
+                    cnt = 1;
+                }
             }
         }
-        
 
         int max = 0;
         for(int i = 0; i < n; i++){
