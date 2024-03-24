@@ -6,8 +6,9 @@ public class Main {
         int n = sc.nextInt();
         int[] arr = new int[n];
         int max = -1, idx = -1, cnt = 0;
-        int[] idxArr = new int[n];
+        int[] idxArr = new int[n]; // 최댓값 위치 저장할 배열
 
+        // 입력한 수 중 최댓값 구해서 배열에 저장
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
             if(arr[i] > max){
