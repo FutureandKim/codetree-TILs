@@ -20,14 +20,16 @@ public class Main {
         decimalNum *= 17;
         
         // 2진수 변환
-        int[] digit = new int[20];
+        int[] digit = new int[50];
         int cnt = 0;
         while (true) {
-            if(decimalNum < 2)
+            if(decimalNum < 2){
                 digit[cnt++] = decimalNum;
+                break;
+            }
 
-            digit[cnt++] = n % 2;
-            n /= 2;
+            digit[cnt++] = decimalNum % 2;
+            decimalNum /= 2;
         }
 
         for(int i = cnt-1; i >= 0; i--)
