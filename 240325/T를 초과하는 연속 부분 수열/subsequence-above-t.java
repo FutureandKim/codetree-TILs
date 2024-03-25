@@ -6,35 +6,22 @@ public class Main {
         int n = sc.nextInt();
         int t = sc.nextInt();
         int[] arr = new int[n];
-        int idx = 0, less = 0;
 
-        for(int i = 0; i < n; i++){
-            int num = sc.nextInt();
+        for(int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
 
-            // t보다 큰 값만 배열에 저장
-            if(num > t){ 
-                arr[idx] = num;
-                idx++;
-            } else{
-                less++;
-            }
-        }
 
-        int cnt = 1;
+        int cnt = 0;
         int max = 0;
-        for(int i = 1; i <= idx; i++){
-            if(arr[i] > arr[i-1])
+        for(int i = 0; i < n; i++){
+            if(i > t)
                 cnt++;
-            else if(arr[i] <= arr[i-1]){
-                if(cnt > max)
-                    max = cnt;
-                cnt = 1;
+            else{
+                max = Math.max(max, cnt);
+                cnt = 0;
             }
         }
-
-        // 조건을 만족하지 않으면 0 출력
-        if(less == n)
-            max = 0;
+        max = Math.max(max, cnt);
         System.out.print(max);
     }
 }
