@@ -31,6 +31,8 @@ public class Main {
                 cnt = 1;
             }
         }
+
+        // 조건을 만족하지 않으면 0 출력
         if(less == n)
             max = 0;
         System.out.print(max);
