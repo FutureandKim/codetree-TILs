@@ -15,7 +15,7 @@ public class Main {
         }
 
         int cnt = 1;
-        int max = -1;
+        int max = 1;
         for(int i = 1; i < n; i++){
             if(arr[i-1] == arr[i])
                 cnt++;
