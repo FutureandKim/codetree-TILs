@@ -14,14 +14,16 @@ public class Main {
         for(int i = 1; i < n; i++){
             if(arr[i-1] < arr[i])
                 cnt++;
-            if(arr[i] >= arr[i]){
+            else if(arr[i] >= arr[i]){
                 if(cnt > max)
                     max = cnt;
                 cnt = 1;
             }
+            if(i == n-1){
+                if(cnt > max)
+                    max = cnt;
+            }
         }
-        if(cnt > max)
-            max = cnt;
         System.out.print(max);
     }
 }
