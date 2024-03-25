@@ -58,7 +58,7 @@ public class Main {
         }
 
         int meet = -1;
-        for(int i = 1; i < 1000; i++){
+        for(int i = 1; i < bIdx; i++){
             if(a[i] == b[i]){
                 meet = i;
                 break;
