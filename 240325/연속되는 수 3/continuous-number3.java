@@ -14,20 +14,21 @@ public class Main {
                 arr[i] = -1;
         }
 
-        int cnt = 0;
-        int[] cont = new int[n];
-        for(int i = 0; i < n; i++){
-            if(i == 0 || arr[i-1] != arr[i]){
-                cont[i] = cnt;
-                cnt = 0;
+        int cnt = 1;
+        int max = -1;
+        for(int i = 1; i < n; i++){
+            if(arr[i-1] == arr[i])
+                cnt++;
+            else if(arr[i-1] != arr[i]){
+                if(cnt > max)
+                    max = cnt;
+                cnt = 1;
             }
-            cnt++;
-        }
-        
-        int max = 0;
-        for(int i = 0; i < n; i++){
-            if(cont[i] > max)
-                max = cont[i];
+            
+            if(i == n-1){
+                if(cnt > max)
+                    max = cnt;
+            }
         }
         System.out.print(max);
     }
