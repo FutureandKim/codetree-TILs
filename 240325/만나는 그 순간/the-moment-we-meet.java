@@ -5,8 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[] a = new int[10000000];
-        int[] b = new int[10000000];
+        int[] a = new int[1000001];
+        int[] b = new int[1000001];
         int aStart = 0, bStart = 0, aIdx = 0, bIdx = 0, cnt;
 
         for(int i = 0; i < n; i++){
