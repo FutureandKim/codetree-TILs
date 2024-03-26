@@ -5,8 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[] aLoc = new int[1000001];
-        int[] bLoc = new int[1000001];
+        int[] aLoc = new int[1000001]; // 시간별 A의 위치정보 저장할 배열
+        int[] bLoc = new int[1000001]; // 시간별 B의 위치정보 저장할 배열
         int aStart = 1, bStart = 1;
 
         for(int i = 0; i < n; i++){
@@ -24,10 +24,8 @@ public class Main {
                 bLoc[j] = bLoc[j-1] + v;
             bStart+=t;
         }
-/*
-        for(int i = 0; i < bStart; i++)
-            System.out.println(aLoc[i] + " " + bLoc[i]); */
 
+        // 같은 인덱스에서 한 배열의 값이 다른 배열의 값보다 커질 때 cnt 증가
         int cnt = 0;
         for(int i = 2; i < bStart; i++){
             if(aLoc[i] > bLoc[i]){
