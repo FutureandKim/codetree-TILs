@@ -13,7 +13,7 @@ public class Main {
         for(int i = 0; i < m; i++){
             int p = sc.nextInt();
             students[p-1]++;
-            if(students[p-1] == (k-1))
+            if(students[p-1] == k)
                 penalty[cnt++] = p;
         }
         System.out.print(penalty[0] == 0 ? -1: penalty[0]);
