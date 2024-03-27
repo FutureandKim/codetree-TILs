@@ -53,7 +53,7 @@ public class Main {
         }
 
         int width = (maxX-minX+1) * (maxY-minY+1);
-        if(fx1 <= sx1 && fy1 <= sy1 && fx2 <= sx2 && fy2 <= sy2)
+        if(fx1 >= sx1 && fy1 >= sy1 && fx2 <= sx2 && fy2 <= sy2)
             width = 0;
 
         //System.out.printf("%d %d %d %d", minX-1000, minY-1000, maxX-1000, maxY-1000);
