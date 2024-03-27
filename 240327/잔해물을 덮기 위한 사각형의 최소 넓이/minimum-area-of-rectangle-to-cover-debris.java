@@ -18,11 +18,13 @@ public class Main {
         int sx2 = sc.nextInt() + 1000;
         int sy2 = sc.nextInt() + 1000;
 
+        // 첫번째 직사각형 부분 칠하기
         for(int i = fx1; i < fx2; i++){
             for(int j = fy1; j < fy2; j++)
                 box[i][j]++;
         }
 
+        // 두번째 직사각형 부분 칠하기
         for(int i = sx1; i < sx2; i++){
             for(int j = sy1; j < sy2; j++)
                 box[i][j]++;
@@ -56,7 +58,6 @@ public class Main {
         if(fx1 >= sx1 && fy1 >= sy1 && fx2 <= sx2 && fy2 <= sy2)
             width = 0;
 
-        //System.out.printf("%d %d %d %d", minX-1000, minY-1000, maxX-1000, maxY-1000);
         System.out.print(width);
     }
 }
