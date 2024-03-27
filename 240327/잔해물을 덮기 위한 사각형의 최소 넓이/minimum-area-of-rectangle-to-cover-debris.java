@@ -31,8 +31,10 @@ public class Main {
         for(int i = fx1; i < fx2; i++){
             for(int j = fy1; j < fy2; j++){
                 if(box[i][j] == 2){
-                    if(box[i-5][j] != 2 || box[i][j-5] != 2 || box[i+5][j] != 2 || box[i][j+5] != 2)
-                        cnt++;
+                    for(int z = fy1; z < fy2; z++){
+                        if(box[i][z] != 2)
+                            cnt++;
+                    }
                 } else if(box[i][j] == 1)
                     cnt++;
             }
