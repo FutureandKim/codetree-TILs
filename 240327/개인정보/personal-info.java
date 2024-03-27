@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Comparator;
-
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,17 +15,17 @@ public class Main {
         }
 
         System.out.println("name");
-        Collections.sort(students, new Comparator<Student>(){
+        Arrays.sort(students, new Comparator<Student>(){
             @Override
-            public String compare(Student s1, Student s2){
-                return s1.name - s2.name;
+            public int compare(Student s1, Student s2){
+                return s1.name.compareTo(s2.name);
             }
         });
         for(int i = 0; i < 5; i++)
             System.out.printf("%s %d %.1f\n", students[i].name, students[i].height, students[i].weight);
 
         Arrays.sort(students);
-        System.out.println("height");
+        System.out.println("\nheight");
         for(int i = 0; i < 5; i++)
             System.out.printf("%s %d %.1f\n", students[i].name, students[i].height, students[i].weight);
     }
