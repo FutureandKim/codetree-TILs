@@ -28,23 +28,31 @@ public class Main {
                 box[i][j]++;
         }
 
+        int minX = fx2, maxX = fx1;
         for(int i = fx1; i < fx2; i++){
             for(int j = fy1; j < fy2; j++){
-                if(box[i][j] == 2){
-                    for(int z = fy1; z < fy2; z++){
-                        if(box[i][z] != 2)
-                            box[i][j] = 1;
-                    }
+                if(box[i][j] == 1){
+                    if(i < minX)
+                        minX = i;
+                    if(i > maxX)
+                        maxX = i;
                 }
             }
         }
 
+        int minY = fy2, maxY = fy1;
         for(int i = fx1; i < fx2; i++){
             for(int j = fy1; j < fy2; j++){
-                if(box[i][j] == 1)
-                    cnt++;
+                if(box[i][j] == 1){
+                    if(j < minY)
+                        minY = j;
+                    if(j > maxY)
+                        maxY = j;
+                }
             }
         }
-        System.out.print(cnt);
+
+        //System.out.printf("%d %d %d %d", minX-1000, minY-1000, maxX-1000, maxY-1000);
+        System.out.print((maxX-minX+1) * (maxY-minY+1));
     }
 }
