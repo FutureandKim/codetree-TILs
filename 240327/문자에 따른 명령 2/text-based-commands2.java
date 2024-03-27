@@ -10,8 +10,12 @@ public class Main {
         int xLoc = 0, yLoc = 0;
 
         for(int i = 0; i < s.length(); i++){
-            if(s.charAt(i) == 'L')
+            if(s.charAt(i) == 'L'){
                 stand--;
+                // 음수가 되는 경우 처리
+                if(stand == -1)
+                    stand = 3;
+            }
             else if(s.charAt(i) == 'R')
                 stand++;
             else if(s.charAt(i) == 'F'){
