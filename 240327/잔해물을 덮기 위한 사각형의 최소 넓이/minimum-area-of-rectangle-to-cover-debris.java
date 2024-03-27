@@ -30,6 +30,7 @@ public class Main {
                 box[i][j]++;
         }
 
+        // 첫번째 사각형 범위에서 값이 1인 최대, 최소 x좌표 값 구하기
         int minX = fx2, maxX = fx1;
         for(int i = fx1; i < fx2; i++){
             for(int j = fy1; j < fy2; j++){
@@ -42,6 +43,7 @@ public class Main {
             }
         }
 
+        // 두번째 사각형 범위에서 값이 1인 최대, 최소 x좌표 값 구하기
         int minY = fy2, maxY = fy1;
         for(int i = fx1; i < fx2; i++){
             for(int j = fy1; j < fy2; j++){
