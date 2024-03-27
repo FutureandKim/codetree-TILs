@@ -33,9 +33,15 @@ public class Main {
                 if(box[i][j] == 2){
                     for(int z = fy1; z < fy2; z++){
                         if(box[i][z] != 2)
-                            cnt++;
+                            box[i][j] = 1;
                     }
-                } else if(box[i][j] == 1)
+                }
+            }
+        }
+
+        for(int i = fx1; i < fx2; i++){
+            for(int j = fy1; j < fy2; j++){
+                if(box[i][j] == 1)
                     cnt++;
             }
         }
