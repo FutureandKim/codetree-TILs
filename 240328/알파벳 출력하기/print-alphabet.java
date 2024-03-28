@@ -10,6 +10,8 @@ public class Main {
             for(int j = 0; j <= i; j++){
                 System.out.print(c);
                 c++;
+                if(c > 'Z')
+                    c = 'A';
             }
             System.out.println();
         }
