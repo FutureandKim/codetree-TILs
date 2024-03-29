@@ -8,14 +8,10 @@ public class Main {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         
-        for(int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
-
         for(int i = 0; i < n; i++){
-            if(arr[i] < min)
-                min = arr[i];
-            if(arr[i] > max)
-                max = arr[i];
+            arr[i] = sc.nextInt();
+            max = Math.max(max, arr[i]);
+            min = Math.min(min, arr[i]);
         }
         System.out.printf("%d %d", min, max);
     }
