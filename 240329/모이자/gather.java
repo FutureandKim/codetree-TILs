@@ -12,12 +12,8 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             int dis = 0;
-            for(int j = 0; j < n; j++){
-                int res = (j-i) * num[j];
-                if(res < 0)
-                    res = -res;
-                dis += res;
-            }
+            for(int j = 0; j < n; j++)
+                dis += Math.abs(j-i) * num[j];
             minDis = Math.min(minDis, dis);
         }
         System.out.print(minDis);
