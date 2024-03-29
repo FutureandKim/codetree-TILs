@@ -9,7 +9,7 @@ public class Main {
         int[] arr = new int[7];
         int[] odd = new int[7];
         int[] even = new int[7];
-        int cnt1 = 0;
+        int cnt1 = 0, cnt2 = 0;
 
         arr[0] = n1 * n2 * n3;
         arr[1] = n1 * n2;
@@ -20,15 +20,13 @@ public class Main {
         arr[6] = n3;
 
         for(int i = 0; i < 7; i++){
-            if(arr[i] % 2 == 0){
-                even[i] = arr[i];
-                cnt1++;
-            }
+            if(arr[i] % 2 == 0)
+                even[cnt1++] = arr[i];
         }
 
         for(int i = 0; i < 7; i++){
             if(arr[i] % 2 != 0)
-                odd[i] = arr[i];
+                odd[cnt2++] = arr[i];
         }
 
         int res = odd[0];
