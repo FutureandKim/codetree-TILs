@@ -32,7 +32,7 @@ public class Main {
         }
 
         int res = odd[0];
-        if(even[0] > res)
+        if(odd[0] == 0)
             res = even[0];
         System.out.print(res);
     }
