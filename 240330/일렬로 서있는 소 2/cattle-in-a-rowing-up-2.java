@@ -10,8 +10,8 @@ public class Main {
         for(int i = 0; i < n; i++)
             cow[i] = sc.nextInt();
 
-         for (int i = 0; i < n - 2; i++) {
-            for (int j = i + 1; j < n - 1; j++) {
+         for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
                 for (int z = j + 1; z < n; z++) {
                     if (cow[i] <= cow[j] && cow[j] <= cow[z]) {
                         cnt++;
