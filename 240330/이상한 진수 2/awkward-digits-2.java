@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
-        int[] arr = new int[a.length()];
-        int res = Integer.MIN_VALUE;
+        int[] arr = new int[a.length()]; // 10진수를 저장할 배열
+        int res = Integer.MIN_VALUE; 
 
         for(int i = 0; i < a.length(); i++){
             char c = a.charAt(i);
