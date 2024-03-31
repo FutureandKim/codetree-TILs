@@ -39,6 +39,8 @@ public class Main {
         int max = Integer.MIN_VALUE;
         for(int i = 0; i < len; i++)
             max = Math.max(max, hap[i]);
+        if(max == 0)
+            max = -1;
         System.out.print(max);
     }
 }
