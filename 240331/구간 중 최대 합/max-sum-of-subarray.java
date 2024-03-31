@@ -12,7 +12,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        for(int i = 0; i < n-3; i++){
+        for(int i = 0; i < n-2; i++){
             hap = arr[i] + arr[i+1] + arr[i+2];
             max = Math.max(hap, max);
         }
