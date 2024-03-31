@@ -64,7 +64,8 @@ public class Main {
                 }
             }
         }
-        if(isWin = false)
+
+        if(isWin == false)
             System.out.print(0);
     }
 }
