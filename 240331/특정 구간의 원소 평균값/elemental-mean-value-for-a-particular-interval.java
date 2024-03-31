@@ -19,7 +19,7 @@ public class Main {
                 avg = avg / (j - i + 1);
                 
                 for(int k = i; k <= j; k++){
-                    if(avg == arr[k]){
+                    if((int)avg == arr[k]){
                         cnt++;
                         break;
                     }
