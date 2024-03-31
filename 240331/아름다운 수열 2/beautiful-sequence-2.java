@@ -16,11 +16,14 @@ public class Main {
 
         for(int i = 0; i < m; i++)
             b[i] = sc.nextInt();
+        Arrays.sort(b);
 
         for(int i = 0; i < n-m+1; i++){
             int idx = 0;
+
             for(int j = i; j < i+m; j++)
                 partial[idx++] = a[j];
+                
             Arrays.sort(partial);
             String s1 ="";
             String s2 ="";
