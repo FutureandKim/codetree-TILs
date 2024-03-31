@@ -33,6 +33,15 @@ public class Main {
                     isWin = true;
                     break;
                 }
+                else if(omok[i][j] == 1 && omok[i+1][j+1] == 1 && omok[i+2][i+2] == 1 && omok[i+3][j+3] == 1 && omok[i+4][j+4] == 1){
+                    System.out.printf("%d\n%d %d", 1, i+3, j+3);
+                    isWin = true;
+                    break;
+                }
+                else if(omok[i][j] == 2 && omok[i+1][j+1] == 2 && omok[i+2][i+2] == 2 && omok[i+3][j+3] == 2 && omok[i+4][j+4] == 2){
+                    System.out.printf("%d\n%d %d", 2, i+3, j+3);
+                    isWin = true;
+                }
             }
         }
         if(isWin = false)
