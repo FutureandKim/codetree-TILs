@@ -11,9 +11,9 @@ public class Main {
                 omok[i][j] = sc.nextInt();
         }
 
+        // 가로
         for(int i = 0; i < 19; i++){
             for(int j = 0; j < 15; j++){
-                // 가로
                 if(omok[i][j] == 1 && omok[i][j+1] == 1 && omok[i][j+2] == 1 && omok[i][j+3] == 1 && omok[i][j+4] == 1){
                     System.out.printf("%d\n%d %d", 1, i+1, j+3);
                     isWin = true;
@@ -24,20 +24,8 @@ public class Main {
                     isWin = true;
                     break;
                 }
-                // 대각선 (y=-x 방향)
-                else if(omok[i][j] == 1 && omok[i+1][j+1] == 1 && omok[i+2][i+2] == 1 && omok[i+3][j+3] == 1 && omok[i+4][j+4] == 1){
-                    System.out.printf("%d\n%d %d", 1, i+3, j+3);
-                    isWin = true;
-                    break;
-                }
-                else if(omok[i][j] == 1 && omok[i+1][j+1] == 2 && omok[i+2][i+2] == 2 && omok[i+3][j+3] == 2 && omok[i+4][j+4] == 2){
-                    System.out.printf("%d\n%d %d", 2, i+3, j+3);
-                    isWin = true;
-                    break;
-                }
             }
         }
-
 
         // 세로
         for(int i = 0; i < 19; i++){
@@ -55,9 +43,25 @@ public class Main {
             }
         }
 
+        // 대각선 (y=-x 방향)
+        for(int i = 0; i < 15; i++){
+            for(int j = 0; j < 15; j++){
+                if(omok[i][j] == 1 && omok[i+1][j+1] == 1 && omok[i+2][i+2] == 1 && omok[i+3][j+3] == 1 && omok[i+4][j+4] == 1){
+                    System.out.printf("%d\n%d %d", 1, i+3, j+3);
+                    isWin = true;
+                    break;
+                }
+                else if(omok[i][j] == 1 && omok[i+1][j+1] == 2 && omok[i+2][i+2] == 2 && omok[i+3][j+3] == 2 && omok[i+4][j+4] == 2){
+                    System.out.printf("%d\n%d %d", 2, i+3, j+3);
+                    isWin = true;
+                    break;
+                }
+            }
+        }
+
+        // 대각선 (y=x 방향)
         for(int i = 5; i < 19; i++){
             for(int j = 0; j < 15; j++){
-                // 대각선 (y=x 방향)
                 if(omok[i][j] == 1 && omok[i-1][j+1] == 1 && omok[i-2][j+2] == 1 && omok[i-3][j+3] == 1 && omok[i-4][j+4] == 1){
                     System.out.printf("%d\n%d %d", 2, i-1, j+3);
                     isWin = true;
@@ -71,7 +75,7 @@ public class Main {
             }
         }
 
-        if(isWin == false)
+        if(!isWin)
             System.out.print(0);
     }
 }
