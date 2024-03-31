@@ -22,13 +22,15 @@ public class Main {
             for(int j = i; j < i+m; j++)
                 partial[idx++] = a[j];
             Arrays.sort(partial);
+            String s1 ="";
+            String s2 ="";
 
             for(int k = 0; k < m; k++){
-                if(k < m-1 && partial[k] != b[k])
-                    break;
-                if(k == m-1 && partial[k] == b[k])
-                    cnt++;
+                s1 += b[k];
+                s2 += partial[k];    
             }
+            if(s1.equals(s2))
+                cnt++;
         }
         System.out.print(cnt);
     }
