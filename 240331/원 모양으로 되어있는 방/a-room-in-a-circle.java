@@ -5,25 +5,21 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] num = new int[n];
-        int[] dis = new int[n];
+        int min = Integer.MAX_VALUE;
 
         for(int i = 0; i < n; i++)
             num[i] = sc.nextInt();
         
         for(int i = 0; i < n; i++){
-            int cnt = 0;
-            int hap = 0;
+            int dis = 0;
             for(int j = 0; j < n; j++){
                 if(j-i < 0)
-                    dis[i] += (num[j] * (n-i+j));
+                    dis += (num[j] * (n-i+j));
                 else
-                    dis[i] += (num[j] * (j-i));
+                    dis += (num[j] * (j-i));
             }
+            min = Math.min(dis, min);
         }
-
-        int min = Integer.MAX_VALUE;
-        for(int i = 0; i < n; i++)
-            min = Math.min(dis[i], min);
         System.out.print(min);
     }
 }
