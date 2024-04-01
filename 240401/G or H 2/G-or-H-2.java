@@ -19,7 +19,8 @@ public class Main {
         Arrays.sort(idxArr);
 
         int max = 0;
-        for(int i = 0; i < n; i++){   
+        for(int i = 0; i < n; i++){
+            // (i, i) (i, i+1) (i, i+2) ... 완전탐색
             for(int j = i; j < n; j++){
                 int cntG = 0, cntH = 0;
                 for(int z = i; z <= j; z++){
