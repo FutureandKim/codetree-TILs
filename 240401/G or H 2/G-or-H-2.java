@@ -20,7 +20,7 @@ public class Main {
 
         int max = 0;
         for(int i = 0; i < n; i++){   
-            for(int j = i+1; j < n; j++){
+            for(int j = i; j < n; j++){
                 int cntG = 0, cntH = 0;
                 for(int z = i; z <= j; z++){
                     if(loc[idxArr[z]] == 'G')
