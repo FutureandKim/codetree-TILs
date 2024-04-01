@@ -13,8 +13,8 @@ public class Main {
         }
 
         for(int i = 0; i < 4; i++){
-            for(int j = 1; j < 5; j++){
-                for(int k = 2; k < 6; k++){
+            for(int j = i+1; j < 5; j++){
+                for(int k = j+1; k < 6; k++){
                     int partSum = ab[i] + ab[j] + ab[k];
                     int otherSum = sum - partSum;
                     int sub = Math.abs(otherSum - partSum);
