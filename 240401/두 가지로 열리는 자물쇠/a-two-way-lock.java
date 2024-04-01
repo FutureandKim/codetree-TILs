@@ -11,6 +11,7 @@ public class Main {
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= n; j++){
                 for(int k = 1; k <= n; k++){
+                    // 1과 n이 인접하다는 조건 고려
                     if((Math.abs(a1-i) <= 2 || Math.abs(a1-i) >= n-2) && (Math.abs(b1-j) <= 2 || Math.abs(b1-j) >= n-2) 
                         && (Math.abs(c1-k) <= 2 || Math.abs(c1-k) >= n-2))
                         cnt++;
