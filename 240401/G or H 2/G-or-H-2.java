@@ -7,15 +7,13 @@ public class Main {
         int n = sc.nextInt();
         char[] loc = new char[101];
         int idxArr[] = new int[n]; // 사람 위치를 저장할 배열
-        int maxLoc = 0;
-        int len = 0, k;
+        int len = 0;
 
         for(int i = 0; i < n; i++){
             int idx = sc.nextInt();
             char c = sc.next().charAt(0);
             loc[idx] = c;
             idxArr[i] = idx; 
-            maxLoc = Math.max(idx, maxLoc);
         }
 
         Arrays.sort(idxArr);
