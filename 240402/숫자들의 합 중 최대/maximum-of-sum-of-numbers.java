@@ -12,6 +12,7 @@ public class Main {
         System.out.print(max);
     }
 
+    // 각 자리 숫자의 합을 구하는 함수
     public static int sumOfEachDigit(int n){
         int sum = 0;
         while(true){
