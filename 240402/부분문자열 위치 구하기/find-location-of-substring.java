@@ -11,7 +11,7 @@ public class Main {
         if(!s1.contains(s2))
             isExist = false;
         else {
-            for(int i = 0; i < len1-len2; i++){
+            for(int i = 0; i < len1-len2+1; i++){
                 if(s1.charAt(i) == s2.charAt(0)){
                     int idx = 0;
                     for(int j = i; j < i+len2; j++){
