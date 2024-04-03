@@ -34,7 +34,6 @@ public class Main {
                 cnt++;
         }
 
-        // 전부 같은 숫자로만 이루어진 경우 제외
         for(int i = 0; i < 10; i++){
             if(num[i] == 1)
                 cntOne++;
@@ -42,7 +41,7 @@ public class Main {
                 cntZero++;
         }
         
-        if(cntOne == 1 || cntZero == 0)
+        if(cntOne == 1 && cntZero == 8)
             return 1;
         return 0;
     }
