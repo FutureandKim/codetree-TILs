@@ -33,6 +33,7 @@ public class Main {
                 cntZero++;
         }
         
+        // num배열에 0이 8개, 1이 1개인 경우 흥미로운 숫자
         if(cntOne == 1 && cntZero == 8)
             return 1;
         return 0;
