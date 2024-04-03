@@ -7,8 +7,7 @@ public class Main {
         int y = sc.nextInt();
         int cnt = 0;
 
-        for(int i = x; i <= y; i++){
-            //System.out.println(i + " " +interestedNum(i));    
+        for(int i = x; i <= y; i++){  
             cnt+=interestedNum(i);
         }
         System.out.println(cnt);
@@ -18,20 +17,13 @@ public class Main {
     public static int interestedNum(int n){
         int origin = n;
         int cntZero = 0, cntOne = 0;
-        int cnt = 0, zeroNum = 0;
-        int[] num = new int[10];
+        int[] num = new int[10]; // 각 자리마다 숫자가 나온 횟수를 저장할 배열
 
         while(true){
             if(n == 0)
                 break;
-            
             num[n%10]++;
             n/=10;
-        }
-
-        for(int i = 0; i < 10; i++){
-            if(num[i] > 1)
-                cnt++;
         }
 
         for(int i = 0; i < 10; i++){
