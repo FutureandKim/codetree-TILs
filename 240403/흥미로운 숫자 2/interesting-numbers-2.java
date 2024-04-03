@@ -17,6 +17,7 @@ public class Main {
 
     public static int interestedNum(int n){
         int origin = n;
+        int cntZero = 0, cntOne = 0;
         int cnt = 0, zeroNum = 0;
         int[] num = new int[10];
 
@@ -35,13 +36,13 @@ public class Main {
 
         // 전부 같은 숫자로만 이루어진 경우 제외
         for(int i = 0; i < 10; i++){
+            if(num[i] == 1)
+                cntOne++;
             if(num[i] == 0)
-                zeroNum++;
+                cntZero++;
         }
-        if(zeroNum == 9)
-            cnt = 0;
-
-        if(cnt == 1)
+        
+        if(cntOne == 1 || cntZero == 0)
             return 1;
         return 0;
     }
