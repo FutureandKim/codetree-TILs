@@ -21,6 +21,7 @@ public class Main {
         System.out.print(min);
     }
 
+    // 두 점 사이의 거리의 제곱을 구하는 함수
     public static int distance2(int x1, int y1, int x2, int y2){
         int res = (x1-x2) * (x1-x2) + (y1-y2) * (y1-y2);
         return res;
