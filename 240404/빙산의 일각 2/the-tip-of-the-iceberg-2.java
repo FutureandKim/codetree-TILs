@@ -21,7 +21,7 @@ public class Main {
     // 빙산의 개수를 출력하는 함수
     public static int numOfIceberg(int k){
         int num = 0;
-        boolean high = false;
+        boolean high = false; // 해수면보다 높은지 판단
 
         for(int i = 0; i < n; i++){
             if(h[i] > k){
