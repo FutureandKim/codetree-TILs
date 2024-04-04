@@ -26,9 +26,7 @@ public class Main {
             if(h[i-1] > k && h[i] <= k)
                 num++;
         }
-        if(h[n-1] > k && h[n-2] <= k)
-            num++;
-            
-        return num;
+
+        return num+1;
     }
 }
