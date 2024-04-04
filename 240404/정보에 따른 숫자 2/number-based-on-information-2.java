@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static char[] loc = new char[1001];
+    public static char[] loc = new char[1001]; // 알파벳 위치를 저장할 배열
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -21,6 +21,7 @@ public class Main {
         System.out.print(cnt);
     }
 
+    // n이 특별한 위치인지 찾는 함수
     public static int isSpecialNum(int n){
         int minD1 = Integer.MAX_VALUE;
         int minD2 = Integer.MAX_VALUE;
