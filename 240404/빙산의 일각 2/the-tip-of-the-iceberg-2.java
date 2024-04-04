@@ -22,11 +22,15 @@ public class Main {
     public static int numOfIceberg(int k){
         int num = 0;
 
-        for(int i = 1; i < n; i++){
-            if(h[i-1] > k && h[i] <= k)
+        for(int i = 0; i < n; i++){
+            if(h[i] > k && i != n-1){
+                if(h[i+1] <= k)
+                    num++;
+            }
+            else if(i == n-1 && h[i] > k && h[i-1] <= k)
                 num++;
         }
 
-        return num+1;
+        return num;
     }
 }
