@@ -12,12 +12,10 @@ public class Main {
         for(int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
 
-        int cnt = 0;
         int max = Integer.MIN_VALUE;
         for(int i = 1; i <= 100; i++){
-            cnt += isEqualDiffer(i);
-            max = Math.max(cnt, max);
-            cnt = 0;
+            int res = isEqualDiffer(i);
+            max = Math.max(res, max);
         }
 
         System.out.print(max);
@@ -28,8 +26,10 @@ public class Main {
         int cnt = 0;
 
         for(int i = 0; i < n-1; i++){
-            for(int j = i+1; i < n; i++){
-                if((arr[i] + arr[j])/2 == k)
+            for(int j = i+1; j < n; j++){
+                if((arr[i] + arr[j]) == 2 * k)
+                
+                //if((k - arr[i]) == (arr[j] - k))
                     cnt++;
             }
         }
