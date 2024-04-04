@@ -21,16 +21,17 @@ public class Main {
     // 빙산의 개수를 출력하는 함수
     public static int numOfIceberg(int k){
         int num = 0;
+        boolean high = false;
 
         for(int i = 0; i < n; i++){
-            if(h[i] > k && i != n-1){
-                if(h[i+1] <= k)
+            if(h[i] > k){
+                if(!high){
+                    high = true;
                     num++;
-            }
-            else if(i == n-1 && h[i] > k && h[i-1] <= k)
-                num++;
+                }
+            } else
+                high = false;
         }
-
         return num;
     }
 }
