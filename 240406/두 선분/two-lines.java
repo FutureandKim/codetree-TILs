@@ -11,9 +11,7 @@ public class Main {
 
         if(x2 < x3 || x4 < x1)
             isIntersect = false;
-
-
-
+            
         System.out.print(isIntersect ? "intersecting" : "nonintersecting");
     }
 }
