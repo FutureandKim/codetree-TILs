@@ -13,29 +13,30 @@ public class Main {
                 rank[i][j] = sc.nextInt();
         }
 
-        // a가 b보다 순위가 높은 경우
-        for(int i = 0; i < n-1; i++){
-            for(int j = i+1; j < n; j++){
+        // (i, j) 개발자 선택
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= n; j++){
+                if(i == j)
+                    continue;
+                boolean isWin = true;
+
+                // rank 배열 순환
                 for(int t = 0; t < k; t++){
-                    if(rank[t][i] < rank[t][j])
+                    int a = -1, b = -1;
+                    for(int z = 0; z < n; z++){
+                        if(rank[t][z] == i) a = z;
+                        if(rank[t][z] == j) b = z;
+                    }
+
+                    if(a > b){
+                        isWin = false;
                         break;
-                    if(t == k-1)
-                        cnt++;
+                    }
                 }
+                if(isWin) cnt++;
             }
         }
 
-        // b가 a보다 순위가 높은 경우
-        for(int i = 0; i < n-1; i++){
-            for(int j = i+1; j < n; j++){
-                for(int t = 0; t < k; t++){
-                    if(rank[t][i] > rank[t][j])
-                        break;
-                    if(t == k-1)
-                        cnt++;
-                }
-            }
-        }
         System.out.print(cnt);
     }
 }
