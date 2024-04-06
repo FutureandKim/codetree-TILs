@@ -6,7 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
         int[] bomb = new int[n];
-        int max = Integer.MIN_VALUE;
+        int max = -1;
 
         for(int i = 0; i < n; i++)
             bomb[i] = sc.nextInt();
@@ -14,10 +14,8 @@ public class Main {
         for(int i = 0; i < n; i++){
             int start = i-k;
             int fin = i+k;
-            if((i-k) < 0)
-                start = 0;
-            if((i+k) >= n)
-                fin = n-1;
+            if((i-k) < 0) start = 0;
+            if((i+k) >= n) fin = n-1;
 
             for(int j = start; j <= fin; j++){
                 if(i == j)
