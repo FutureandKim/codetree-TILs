@@ -15,7 +15,7 @@ public class Main {
 
         boolean isOverlap = true;
 
-        if(x2 < a1 || b2 < x1) isOverlap = false;
+        if(x2 < a1 || a2 < x1) isOverlap = false;
         if(b2 < y1 || y2 < b2) isOverlap = false;
 
         System.out.print(isOverlap ? "overlapping" : "nonoverlapping");
