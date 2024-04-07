@@ -18,9 +18,9 @@ public class Main {
         else if(c <= a && a <= d && d < b)
             len = b - c;
         // 한 직선이 다른 직선 내에 포함되는 경우
-        else if(a < c && d < b)
+        else if(a <= c && d <= b)
             len = b - a;
-        else if(c < a && b < d)
+        else if(c <= a && b <= d)
             len = d - c;
 
         System.out.print(len);
