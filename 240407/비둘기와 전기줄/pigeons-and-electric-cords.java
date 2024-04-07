@@ -13,7 +13,6 @@ public class Main {
             lastLoc[i] = -1;
         }
 
-
         for(int i = 0; i < n; i++){
             int num = sc.nextInt();
             int loc = sc.nextInt();
