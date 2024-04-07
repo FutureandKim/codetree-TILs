@@ -35,7 +35,6 @@ public class Main {
             }
         }
 
-
         System.out.print(isOverlap ? "Yes" : "No");
     }
 }
