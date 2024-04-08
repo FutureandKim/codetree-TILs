@@ -38,7 +38,7 @@ public class Main {
 
         // 4. 1-바위 2-보 3-가위
         for(int i = 0; i < n; i++){
-            if((res[i][0] == 1 && res[i][1] == 3) || (res[i][0] == 2 && res[i][1] == 1) || (res[i][0] == 3 && res[i][1] == 1))
+            if((res[i][0] == 1 && res[i][1] == 3) || (res[i][0] == 2 && res[i][1] == 1) || (res[i][0] == 3 && res[i][1] == 2))
                 cnt++;
         }
         max = Math.max(cnt, max);
