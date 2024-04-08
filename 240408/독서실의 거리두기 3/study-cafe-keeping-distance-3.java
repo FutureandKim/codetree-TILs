@@ -37,6 +37,11 @@ public class Main {
             }
             maxLen = Math.max(maxLen, len);
         }
+
+        for(int i = 0; i < n-1; i++){
+            if(seat[i] == '1' && seat[i+1] == '1')
+                maxLen = 1;
+        }
         System.out.print(maxLen);
     }
 }
