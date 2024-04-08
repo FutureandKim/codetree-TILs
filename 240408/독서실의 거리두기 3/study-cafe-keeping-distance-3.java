@@ -38,6 +38,7 @@ public class Main {
             maxLen = Math.max(maxLen, len);
         }
 
+        // 나란히 나열된 1이 있는 경우
         for(int i = 0; i < n-1; i++){
             if(seat[i] == '1' && seat[i+1] == '1')
                 maxLen = 1;
