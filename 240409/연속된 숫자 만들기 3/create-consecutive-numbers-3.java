@@ -11,26 +11,7 @@ public class Main {
         for(int i = 0; i < 3; i++){
             p[i] = sc.nextBigInteger();
         }
-/*
-        if(p[1].subtract(p[2]).compareTo(p[2].subtract(p[1])) >= 0){
-            while(true){
-                if(p[0].add(BigInteger.ONE).equals(p[1]) && p[1].add(BigInteger.ONE).equals(p[2]))
-                    break;
-                p[2] = p[1].subtract(BigInteger.ONE);
-                Arrays.sort(p);
-                cnt = cnt.add(BigInteger.valueOf(1));
-            }
-        }   
-        else {
-            while(true){
-                if(p[0].add(BigInteger.ONE).equals(p[1]) && p[1].add(BigInteger.ONE).equals(p[2]))
-                    break;
-                p[0] = p[1].add(BigInteger.ONE);
-                Arrays.sort(p);
-                cnt = cnt.add(BigInteger.valueOf(1));
-            }
-        }  
-        */
+
         if(p[1].subtract(p[0]).compareTo(p[2].subtract(p[1])) >= 0)
             cnt = p[1].subtract(p[0]).subtract(BigInteger.ONE);
         else
