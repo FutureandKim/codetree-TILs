@@ -27,11 +27,9 @@ public class Main {
         for(int i = 0; i < n; i++){
             if(arr[0] == num[i])
                 cntArr0++;
-            if(arr[1] == num[i])
-                cntArr1++;
         }
 
-        if(cntArr0 > 1 || cntArr1 > 1)
+        if(cntArr0 > 1)
             loc = -1;
         System.out.print(loc);
     }
