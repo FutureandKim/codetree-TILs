@@ -22,7 +22,8 @@ public class Main {
             if(arr[i] > arr[0]){
                 min2 = arr[i];
                 break;
-            } 
+            }
+            // 두번쨰로 작은 수가 없다면 최소값을 min2로 처리
             else if(i == n-1 && arr[0] == arr[i])
                 min2 = arr[0];
         }
@@ -34,7 +35,7 @@ public class Main {
             }
         }
 
-        // 두번째로 작은수가 여러개라면 -1
+        // min2와 같은 수가 여러개라면 -1
         for(int i = 0; i < n; i++){
             if(min2 == num[i])
                 cntMin2++;
