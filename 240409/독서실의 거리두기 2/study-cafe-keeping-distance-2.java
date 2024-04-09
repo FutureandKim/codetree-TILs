@@ -7,7 +7,7 @@ public class Main {
         String str = sc.next();
         int[] seat = new int[n];
         int len = 0, maxLen = 0;
-        int minLen = 10000, a = 0;
+        int minLen = 10000;
 
         for(int i = 0; i < n; i++)
             seat[i] = str.charAt(i);
