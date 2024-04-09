@@ -12,7 +12,7 @@ public class Main {
             seat[i] = str.charAt(i);
 
         
-        for(int i = 1; i < n-1; i++){
+        for(int i = 0; i < n; i++){
             if(seat[i] == '1')
                 continue;
             else{
@@ -31,8 +31,13 @@ public class Main {
                         break;
                     }
                 }
+                if(i == 0)
+                    left = Integer.MAX_VALUE;
+                if(i == n - 1)
+                    right = Integer.MAX_VALUE;
+
                 // 가까운 거리 선택
-                //System.out.printf("%d %d\n", left, right);
+                //System.out.printf("%d: %d %d\n", i, left, right);
                 len = Math.min(left, right);
             }
             maxLen = Math.max(maxLen, len);
