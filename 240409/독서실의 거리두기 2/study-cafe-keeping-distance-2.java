@@ -12,6 +12,7 @@ public class Main {
         for(int i = 0; i < n; i++)
             seat[i] = str.charAt(i);
 
+        // 기존 사용자 사이의 거리의 최소값 구하기
         for(int i = 0; i < n; i++){
             if(seat[i] == '0')
                 continue;
@@ -52,14 +53,10 @@ public class Main {
                 //System.out.printf("%d: %d %d\n", i, left, right);
                 len = Math.min(left, right);
             }
+            // 가장 가까운 두 사람의 거리의 최대값
             maxLen = Math.max(maxLen, len);
         }
-/*
-        // 나란히 나열된 1이 있는 경우
-        for(int i = 0; i < n-1; i++){
-            if(seat[i] == '1' && seat[i+1] == '1')
-                maxLen = 1;
-        }*/
+
         maxLen = Math.min(maxLen, minLen);
         System.out.print(maxLen);
     }
