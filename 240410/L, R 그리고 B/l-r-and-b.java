@@ -31,7 +31,7 @@ public class Main {
             }
         }
 
-        if(bi == ri && ri == li && ((bj < lj && lj < rj) || (rj < lj && lj < bj))){
+        if(bi == ri && ri == li && ((bj < rj && rj < lj) || (lj < rj && rj < bj))){
             len = Math.abs(lj - bj) + 1;
         }
         else if(bj == rj && rj == lj && ((bi < ri && ri < li) || (li < ri && ri < bi)))
