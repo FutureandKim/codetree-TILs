@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] str = new String[10];
-        char[][] arr = new char[10][10];
         int bi = 0, bj = 0;
         int ri = 0, rj = 0;
         int li = 0, lj = 0;
@@ -15,16 +14,15 @@ public class Main {
 
         for(int i = 0; i < 10; i++){
             for(int j = 0; j < 10; j++){
-                arr[i][j] = str[i].charAt(j);
-                if(arr[i][j] == 'B'){
+                if(str[i].charAt(j) == 'B'){
                     bi = i;
                     bj = j;
                 }
-                else if(arr[i][j] == 'R'){
+                else if(str[i].charAt(j) == 'R'){
                     ri = i;
                     rj = j;
                 }
-                else if(arr[i][j] == 'L'){
+                else if(str[i].charAt(j) == 'L'){
                     li = i;
                     lj = j;
                 }
