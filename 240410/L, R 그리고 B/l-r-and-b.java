@@ -31,9 +31,10 @@ public class Main {
             }
         }
 
-        if(bi == ri && ri == li)
+        if(bi == ri && ri == li && ((bj < lj && lj < rj) || (rj < lj && lj < bj))){
             len = Math.abs(lj - bj) + 1;
-        else if(bj == rj && rj == lj)
+        }
+        else if(bj == rj && rj == lj && ((bi < ri && ri < li) || (li < ri && ri < bi)))
             len = Math.abs(li - bi) + 1;
         else 
             len = Math.abs(lj - bj) + Math.abs(li - bi) - 1;
