@@ -27,7 +27,7 @@ public class Main {
             // 명예의 전당에 있던 사람과 새롭게 올라간 사람이 다르다면 cnt 증가
             if(!origin.equals(new_winner)){
                 cnt++;
-                new_winner = origin;
+                origin = new_winner;
             }
         }
         System.out.print(cnt);
