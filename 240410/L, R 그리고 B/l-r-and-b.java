@@ -31,12 +31,10 @@ public class Main {
             }
         }
 
-        
-
         if(bi == ri && ri == li)
-            len = Math.abs(lj - bj) + 1 + 3;
+            len = Math.abs(lj - bj) + 1;
         else if(bj == rj && rj == lj)
-            len = Math.abs(li - bi) + 1 + 3;
+            len = Math.abs(li - bi) + 1;
         else 
             len = Math.abs(lj - bj) + Math.abs(li - bi) - 1;
         System.out.print(len);
