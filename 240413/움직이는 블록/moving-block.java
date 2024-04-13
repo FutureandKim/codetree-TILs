@@ -17,7 +17,7 @@ public class Main {
         Arrays.sort(arr);
 
         while(true){
-            if(arr[0] == avg && arr[n-1] == avg)
+            if(arr[0] == arr[n-1])
                 break;
             int num = Math.min(arr[n-1]-avg, avg-arr[0]);
             arr[0] = arr[0] + num;
