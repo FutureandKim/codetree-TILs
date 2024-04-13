@@ -17,11 +17,11 @@ public class Main {
         Arrays.sort(arr);
 
         while(true){
-            if(arr[0] == arr[1] && arr[2] == arr[3] && arr[0] == arr[2])
+            if(arr[0] == avg && arr[n-1] == avg)
                 break;
-            int num = Math.min(arr[3]-avg, avg-arr[0]);
+            int num = Math.min(arr[n-1]-avg, avg-arr[0]);
             arr[0] = arr[0] + num;
-            arr[3] = arr[3] - num;
+            arr[n-1] = arr[n-1] - num;
             cnt += num;
             Arrays.sort(arr);
         }
