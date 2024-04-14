@@ -19,6 +19,8 @@ public class Main {
                 wifi++;
                 cntLeft = 0;
             }
+            else if(cntLeft == n-1 && wifi == 0)
+                wifit = 1;
         }
         System.out.print(wifi);
     }
