@@ -21,22 +21,15 @@ public class Main {
         }
         else{
             for(int i = 0; i < n; i++){
-                if(arr[i] == 1)
-                    cntLeft++;
-
-                if(cntLeft == m){
+                if(arr[i] == 1){
                     wifi++;
-                    cntLeft = 0;
-                    for(int j = i; j <= m+i+1; j++){
+                    for(int j = i; j < i+m*2+1; j++){
                         if(j < n)
                             arr[j] = 0;
                     }
                 }
-                if(i == n-1 && arr[i] == 1)
-                    wifi += 1;
             }
         }
-
         System.out.print(wifi);
     }
 }
