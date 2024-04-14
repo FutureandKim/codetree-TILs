@@ -14,6 +14,7 @@ public class Main {
         for(int i = 0; i < n; i++){
             if(arr[i] == 1)
                 cntLeft++;
+
             if(cntLeft == m+1){
                 wifi++;
                 cntLeft = 0;
@@ -22,7 +23,8 @@ public class Main {
                         arr[j] = 0;
                 }
             }
-            else if(cntLeft == n-1 && wifi == 0)
+
+            if(i == n-1 && wifi == 0)
                 wifi = 1;
         }
 
@@ -32,6 +34,7 @@ public class Main {
             else if(arr[n-1] == 0)
                 wifi = 0;
         }
+
         System.out.print(wifi);
     }
 }
