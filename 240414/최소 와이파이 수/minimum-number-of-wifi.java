@@ -11,20 +11,30 @@ public class Main {
         for(int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
 
-        for(int i = 0; i < n; i++){
-            if(arr[i] == 1)
-                cntLeft++;
-
-            if(cntLeft == m){
-                wifi++;
-                cntLeft = 0;
-                for(int j = i; j <= m+i+1; j++){
-                    if(j < n)
-                        arr[j] = 0;
-                }
+        if(m == 0){
+            int cnt = 0;
+            for(int i = 0; i < n; i++){
+                if(arr[i] == 1)
+                    cnt++;
             }
-            if(i == n-1 && arr[i] == 1)
-                wifi += 1;
+            wifi = cnt;
+        }
+        else{
+            for(int i = 0; i < n; i++){
+                if(arr[i] == 1)
+                    cntLeft++;
+
+                if(cntLeft == m){
+                    wifi++;
+                    cntLeft = 0;
+                    for(int j = i; j <= m+i+1; j++){
+                        if(j < n)
+                            arr[j] = 0;
+                    }
+                }
+                if(i == n-1 && arr[i] == 1)
+                    wifi += 1;
+            }
         }
 
         System.out.print(wifi);
