@@ -15,24 +15,16 @@ public class Main {
             if(arr[i] == 1)
                 cntLeft++;
 
-            if(cntLeft == m+1){
+            if(cntLeft == m){
                 wifi++;
                 cntLeft = 0;
-                for(int j = i; j < m+i; j++){
+                for(int j = i; j <= m+i+1; j++){
                     if(j < n)
                         arr[j] = 0;
                 }
             }
-
-            if(i == n-1 && wifi == 0)
-                wifi = 1;
-        }
-
-        for(int i = 0; i < n; i++){
-            if(arr[i] == 1)
-                break;
-            else if(arr[n-1] == 0)
-                wifi = 0;
+            if(i == n-1 && arr[i] == 1)
+                wifi += 1;
         }
 
         System.out.print(wifi);
