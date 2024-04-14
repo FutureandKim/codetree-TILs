@@ -14,10 +14,11 @@ public class Main {
         for(int i = 0; i < n; i++){
             if(arr[i] == 1)
                 cntLeft++;
-            
             if(cntLeft == m+1){
                 wifi++;
                 cntLeft = 0;
+                for(int j = i; j < m+i; j++)
+                    arr[j] = 0;
             }
             else if(cntLeft == n-1 && wifi == 0)
                 wifi = 1;
