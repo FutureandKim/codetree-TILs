@@ -22,6 +22,8 @@ public class Main {
                         arr[j] = 0;
                 }
             }
+            else if(cntLeft == n-1 && wifi == 0)
+                wifi = 1;
         }
 
         for(int i = 0; i < n; i++){
