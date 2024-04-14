@@ -22,6 +22,13 @@ public class Main {
             else if(cntLeft == n-1 && wifi == 0)
                 wifi = 1;
         }
+
+        for(int i = 0; i < n; i++){
+            if(arr[i] == 1)
+                break;
+            else if(arr[n-1] == 0)
+                wifi = 0;
+        }
         System.out.print(wifi);
     }
 }
