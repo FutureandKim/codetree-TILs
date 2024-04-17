@@ -15,26 +15,32 @@ public class Main {
 
         // 행에서 행복한 수열 찾기
         for(int i = 0; i < n; i++){
-            int idx = 0, same = 1;
-            while(idx < n-1){
-                if(arr[i][idx] == arr[i][idx+1])
-                    same++;
-                idx++;
+            int same = 1;
+            for(int j = 0; j < n-1; j ++){
+                if(arr[i][j] == arr[i][j+1])
+                    same += 1;
+                else
+                    same = 1;
+                if(same >= m){
+                    cnt++;
+                    break;
+                }
             }
-            if(same >= m)
-                cnt++;
         }
 
         // 열에서 행복한 수열 찾기
         for(int j = 0; j < n; j++){
-            int idx = 0, same = 1;
-            while(idx < n-1){
-                if(arr[idx][j] == arr[idx+1][j])
-                    same++;
-                idx++;
+            int same = 1;
+            for(int i = 0; i < n-1; i++){
+                if(arr[i][j] == arr[i+1][j])
+                    same += 1;
+                else
+                    same = 1;
+                if(same >= m){
+                    cnt++;
+                    break;
+                }
             }
-            if(same >= m)
-                cnt++;
         }
         System.out.print(cnt);
     }
