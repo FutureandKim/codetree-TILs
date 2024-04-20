@@ -16,8 +16,8 @@ public class Main {
 
     public static void commandProcessing(String str){
         if(str.equals("push_back")){
-                int num = sc.nextInt();
-                arr.add(num);
+            int num = sc.nextInt();
+            arr.add(num);
         }
         else if(str.equals("pop_back"))
             arr.remove(arr.size()-1);
