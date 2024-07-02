@@ -5,19 +5,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-
-        System.out.print(isAns(a, b));
-    }
-
-    public static int isAns(int a, int b){
         int cnt = 0;
 
         for(int i = a; i <= b; i++){
-            if((i/10)%3 == 0 || (i%10)%3 == 0)
-                cnt++;
-            else if(i%3 == 0)
+            if(isAns(i))
                 cnt++;
         }
-        return cnt;
+        System.out.print(cnt);
+    }
+
+    public static boolean isAns(int i){
+        return i%3 == 0 || isContain369(i);
+    }
+
+    public static boolean isContain369(int i){
+        String str = Integer.toString(i);
+
+        return str.contains("3") || str.contains("6") || str.contains("9");
     }
 }
