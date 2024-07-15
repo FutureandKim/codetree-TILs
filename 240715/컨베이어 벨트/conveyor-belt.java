@@ -14,7 +14,7 @@ public class Main {
         }
 
         // 값 바꾸기
-        changeVal(arr, n);
+        arr = changeVal(arr, n);
 
 
         // t만큼 회전
@@ -23,7 +23,7 @@ public class Main {
 
 
         // 값 다시 바꾸기
-        changeVal(arr, n);
+        arr = changeVal(arr, n);
 
         for(int i = 0; i < n; i++)
             System.out.printf("%d ", arr[0][i]);
@@ -35,10 +35,15 @@ public class Main {
 
     // arr[1][0], arr[1][n-1] 값 바꾸는 함수
     public static int[][] changeVal(int[][] arr, int n){
-        int temp = arr[1][0];
-        arr[1][0] = arr[1][n-1];
-        arr[1][n-1] = temp;
-        return arr;
+        int[][] arr2 = new int[2][n];
+
+        for(int i = 0; i < n; i++)  
+            arr2[0][i] = arr[0][i];
+
+        for(int i = 0; i < n; i++)
+            arr2[1][i] = arr[1][n-1-i];
+
+        return arr2;
     }
 
     public static int[][] conveyor(int[][] arr, int n){
