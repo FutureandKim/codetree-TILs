@@ -16,11 +16,9 @@ public class Main {
         // 값 바꾸기
         arr = changeVal(arr, n);
 
-
         // t만큼 회전
         for(int i = 0; i < t; i++)
             arr = conveyor(arr, n);
-
 
         // 값 다시 바꾸기
         arr = changeVal(arr, n);
@@ -46,6 +44,7 @@ public class Main {
         return arr2;
     }
 
+    // 회전하는 함수
     public static int[][] conveyor(int[][] arr, int n){
         int[][] arr2 = new int[2][n];
 
