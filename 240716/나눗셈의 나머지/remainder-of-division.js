@@ -6,8 +6,8 @@ let rArr = Array(b).fill(0);
 
 while(a > 1){
     let q = Math.floor(a/b);
+    rArr[a % b]++;
     a = q;
-    rArr[q % b]++;
 }
 
 let sum = 0;
