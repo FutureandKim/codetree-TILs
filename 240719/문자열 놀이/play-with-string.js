@@ -14,7 +14,7 @@ for(let i = 1; i <= n; i++){
 
     else if(Number(qNum) === 2){
         for(let i = 0; i < questionSplit.length; i++){
-            if(questionSplit[i] == idx1)
+            if(questionSplit[i] === idx1)
                 questionSplit[i] = idx2;
         }
     }
