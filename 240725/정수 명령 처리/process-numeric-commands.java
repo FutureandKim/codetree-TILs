@@ -15,15 +15,19 @@ public class Main {
                 int n = sc.nextInt();
                 s.push(n);
             }
+
             else if(str.equals("size"))
                 System.out.println(s.size());
+
             else if(str.equals("empty")){
                 if(s.isEmpty()) 
                     System.out.println(1);
                 else System.out.println(0);
             }
+
             else if(str.equals("top"))
                 System.out.println(s.peek());
+                
             else if(str.equals("pop"))
                 System.out.println(s.pop());
             
