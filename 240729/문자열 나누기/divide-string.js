@@ -19,4 +19,8 @@ for(let i = 0; i < str.length; i++){
         num++;
     }
 }
-console.log(num);
+
+let res2 = "";
+for(let i = num*5; i < str.length; i++)
+    res2 += str[i];
+console.log(res2);
