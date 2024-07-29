@@ -4,6 +4,7 @@ str = str.split(" ").join("");
 
 let res = "";
 let cnt = 0;
+
 for(let c of str){
     res += c;
     cnt++;
