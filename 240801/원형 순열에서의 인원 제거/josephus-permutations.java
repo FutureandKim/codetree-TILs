@@ -15,7 +15,7 @@ public class Main {
         while(!q.isEmpty()){
             // k 전까지 다 지우고 큐에 다시 추가
             for(int i = 0; i < k-1; i++)
-                q.add(q.remove());
+                q.add(q.poll());
             
             // k 번째 수 출력
             System.out.print(q.poll() + " ");
