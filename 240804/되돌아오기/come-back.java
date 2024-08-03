@@ -14,8 +14,10 @@ public class Main {
             int m = sc.nextInt();
             for(int j = 0; j < m; j++){
                 cnt ++;
-                if(move(dot, dir))
+                if(move(dot, dir)){
                     res = cnt;
+                    break;
+                }
             }
         }
         System.out.print(res);
