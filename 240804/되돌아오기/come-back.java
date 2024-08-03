@@ -39,6 +39,7 @@ public class Main {
                 break;
             case 'W':
                 dot[0] -= 1;
+                break;
         }
         if(dot[0] == 0 && dot[1] == 0)
             return true;
