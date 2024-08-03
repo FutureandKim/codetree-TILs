@@ -8,15 +8,16 @@ public class Main {
 
         int cnt = 0;
         int res = -1;
+        boolean isComeback = false;
 
         for(int i = 0; i < n; i++){
             char dir = sc.next().charAt(0);
             int m = sc.nextInt();
             for(int j = 0; j < m; j++){
                 cnt ++;
-                if(move(dot, dir)){
+                if(move(dot, dir) && !isComeback){
                     res = cnt;
-                    break;
+                    isComeback = true;
                 }
             }
         }
