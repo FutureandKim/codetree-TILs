@@ -23,14 +23,15 @@ public class Main {
             }
         }
 
-        int res = 0;
+        int cnt = 0;
 
         for (int i = 0; i < 201; i++) {
+            // 2번 이상 방문한 영역 카운트
             if (line[i] >= 2) {
-                res++;
+                cnt++;
             }
         }
 
-        System.out.println(res);
+        System.out.println(cnt);
     }
 }
