@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] line = new int[4001];
-        int idx = 2000;
+        int[] line = new int[201];
+        int idx = 100;
 
         for(int i = 0; i < n; i++){
             int x = sc.nextInt();
@@ -25,7 +25,7 @@ public class Main {
 
         int res = 0;
 
-        for (int i = 0; i < 4001; i++) {
+        for (int i = 0; i < 201; i++) {
             if (line[i] >= 2) {
                 res++;
             }
