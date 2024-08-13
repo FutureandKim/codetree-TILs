@@ -35,7 +35,7 @@ function allGroup(){
 }
 
 let all = allGroup();
-for(let i = 0; i < 15; i++){
+for(let i = 0; i < all.length; i++){
     if(all[i][0] === all[i][1] || all[i][1] === all[i][2])
         all.splice(i, 1);
 }
