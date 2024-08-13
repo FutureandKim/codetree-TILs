@@ -47,4 +47,4 @@ for(let i = 0; i < all.length; i++){
 
 sumArr.sort();
 const res = sumArr.find(el => el !== 0);
-res !== 'undefined' ? console.log(res) : console.log(-1);
+res !== undefined ? console.log(res) : console.log(-1);
