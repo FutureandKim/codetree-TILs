@@ -12,7 +12,7 @@ function selectTwo(arr) {
     return group;
 }
 
-// 유효성을 검사
+// 유효성 검사
 function generateAndValidateTeams() {
     const allGroups = [];
 
@@ -46,7 +46,7 @@ function generateAndValidateTeams() {
     return allGroups;
 }
 
-// 능력 차이
+// 능력치 차이 계산
 function findMinimumDifference() {
     let allTeams = generateAndValidateTeams();
     if (allTeams.length === 0) return -1;
