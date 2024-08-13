@@ -2,49 +2,66 @@ const fs = require("fs");
 const input = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
 // 2명 뽑는 조합 함수
-function selectTwo(arr, n){
+function selectTwo(arr) {
     let group = [];
-    if(n === 1) return arr.map(el => [el]);
-    arr.forEach((el, i) => {
-        const selectTwoPerson = selectTwo(arr.slice(i+1), n - 1);
-        selectTwoPerson.forEach(two => {
-            group.push([el, ...two]);
-        });
-    });
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            group.push([arr[i], arr[j]]);
+        }
+    }
     return group;
 }
 
-// 모든 조합 경우의 수
-function allGroup(){
-    let g1 = selectTwo(input, 2);
+// 모든 팀 조합을 만들고 유효성을 검사하는 함수
+function generateAndValidateTeams() {
     const allGroups = [];
 
-    g1.forEach(groupA => {
-        const remain = input.filter(el => !groupA.includes(el));
-        let g2 = selectTwo(remain, 2);
+    let pairs = selectTwo(input);
 
-        g2.forEach(groupB =>{
-            const remain2 = remain.filter(el => !groupB.includes(el));
-            let groupC = remain2;
-            let arr = [groupA[0]+groupA[1], groupB[0]+groupB[1], groupC[0]]; // 능력치를 더한 값을 구하기
-            arr.sort();
-            allGroups.push(arr); 
-        })
-    })
+    for (let i = 0; i < pairs.length; i++) {
+        let [a1, a2] = pairs[i];
+        let remaining = input.filter(x => x !== a1 && x !== a2);
+        
+        if (remaining.length < 3) continue;
+
+        let pairs2 = selectTwo(remaining);
+
+        for (let j = 0; j < pairs2.length; j++) {
+            let [b1, b2] = pairs2[j];
+            let remaining2 = remaining.filter(x => x !== b1 && x !== b2);
+            let [c1] = remaining2;
+
+            let abilities = [
+                a1 + a2,
+                b1 + b2,
+                c1
+            ];
+            
+            if (new Set(abilities).size === abilities.length) {
+                allGroups.push(abilities.sort((x, y) => x - y));
+            }
+        }
+    }
+
     return allGroups;
 }
 
-let all = allGroup();
-for(let i = 0; i < all.length; i++){
-    if(all[i][0] === all[i][1] || all[i][1] === all[i][2])
-        all.splice(i, 1);
+// 팀 능력치의 차이 계산
+function findMinimumDifference() {
+    let allTeams = generateAndValidateTeams();
+
+    if (allTeams.length === 0) return -1;
+
+    let minDifference = Infinity;
+
+    for (let team of allTeams) {
+        let difference = team[2] - team[0];
+        if (difference < minDifference) {
+            minDifference = difference;
+        }
+    }
+
+    return minDifference;
 }
 
-let sumArr = [];
-for(let i = 0; i < all.length; i++){
-    sumArr.push(all[i][2] - all[i][0]);
-}
-
-sumArr.sort();
-const res = sumArr.find(el => el !== 0);
-console.log(res !== undefined ? res : -1);
+console.log(findMinimumDifference());
