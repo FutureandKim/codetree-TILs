@@ -34,8 +34,8 @@ public class Main {
             int studentCnt = 0;
 
             for(int cost : totalCost){
-                if(priceNow + cost <= b){
-                    priceNow += cost;
+                priceNow += cost;
+                if(priceNow <= b){
                     studentCnt++;
                 }
                 else break;
