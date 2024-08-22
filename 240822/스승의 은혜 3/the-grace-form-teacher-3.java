@@ -6,7 +6,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int b = sc.nextInt();
-        int[] arr = new int[n];
 
         int[] p = new int[n];
         int[] s = new int[n];
@@ -17,24 +16,34 @@ public class Main {
             s[i] = sc.nextInt();
         }
 
+        int maxNum = 0;
+
         for(int i = 0; i < n; i++){
-            int cnt = 0;
-            int price = 0;
+            
+            int[] totalCost = new int[n];
             for(int j = 0; j < n; j++){
                 if(j == i)
-                    price += ((p[j]/2) + s[j]);
-                else price += (p[j] + s[j]);
-
-                if(price > b){
-                    arr[i] = cnt;
-                    break;
-                }
-                
-                cnt++;
+                    totalCost[j] = ((p[j]/2) + s[j]); // i번째 선물 반값
+                else 
+                    totalCost[j] = (p[j] + s[j]);
             }
+
+            Arrays.sort(totalCost); // (선물 + 배송비) 적은 순 정렬 → 더 많은 학생 선물 사줄 수 있으니까
+
+            int priceNow = 0;
+            int studentCnt = 0;
+
+            for(int cost : totalCost){
+                if(priceNow + cost < b){
+                    priceNow += cost;
+                    studentCnt++;
+                }
+                else break;
+            }
+            maxNum = Math.max(maxNum, studentCnt);
         }
 
-        Arrays.sort(arr);
-        System.out.print(arr[n-1]);
+        System.out.print(maxNum);
+
     }
 }
