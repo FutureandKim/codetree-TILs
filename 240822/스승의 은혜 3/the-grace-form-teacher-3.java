@@ -35,9 +35,7 @@ public class Main {
 
             for(int cost : totalCost){
                 priceNow += cost;
-                if(priceNow <= b){
-                    studentCnt++;
-                }
+                if(priceNow <= b) studentCnt++;
                 else break;
             }
             maxNum = Math.max(maxNum, studentCnt);
