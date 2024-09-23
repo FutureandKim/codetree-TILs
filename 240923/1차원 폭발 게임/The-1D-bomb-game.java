@@ -6,23 +6,28 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        ArrayList<Integer> bombArr = new ArrayList<Integer>();
+        int[][] bombArr = new int[n][2];
 
-        int idx = 0;
+        int cnt = 0;
         for(int i = 0; i < n; i++){
             int b = sc.nextInt();
-            if(idx > 0) {
-                if(bombArr.get(idx) != b){
-                    bombArr.add(b);
-                    idx++;
-                }
-                else
-                    bombArr.remove(idx);
+            if(cnt > 0 && bombArr[cnt-1][0] == b){
+                bombArr[cnt-1][1]++;
+                cnt++;
+            } else {
+                bombArr[cnt][0] = b;
             }
         }
 
-        System.out.println(bombArr.size());
-        for(int bomb : bombArr)
-            System.out.println(bomb);
+        ArrayList<Integer> resArr = new ArrayList<Integer>();
+        for(int i = 0; i < cnt; i++){
+            if(bombArr[i][1] == 1)
+                resArr.add(bombArr[i][0]); 
+        }
+
+        System.out.println(resArr.size());
+        for(int res : resArr)
+            System.out.println(res);
+
     }
 }
