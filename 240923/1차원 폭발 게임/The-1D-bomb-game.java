@@ -1,33 +1,36 @@
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[][] bombArr = new int[n][2];
-
-        int cnt = 0;
+        Stack<int[]> bombStack = new Stack<>();
+        
         for(int i = 0; i < n; i++){
-            int b = sc.nextInt();
-            if(cnt > 0 && bombArr[cnt-1][0] == b){
-                bombArr[cnt-1][1]++;
-                cnt++;
-            } else {
-                bombArr[cnt][0] = b;
+            int num = sc.nextInt();
+
+            if(!bombStack.isEmpty() && bombStack.peek()[0] == num){
+                bombStack.peek()[1]++;
+            } else{
+                bombStack.push(new int[]{num, 1});
+            }
+
+            if(bombStack.peek()[1] >= m){
+                bombStack.pop();
             }
         }
 
-        ArrayList<Integer> resArr = new ArrayList<Integer>();
-        for(int i = 0; i < cnt; i++){
-            if(bombArr[i][1] == 1)
-                resArr.add(bombArr[i][0]); 
+        Stack<Integer> resStack = new Stack<>();
+        while(!bombStack.isEmpty()){
+            int[] pair = bombStack.pop();
+            for(int i = 0; i < pair[1]; i++)
+                resStack.push(pair[0]);
         }
 
-        System.out.println(resArr.size());
-        for(int res : resArr)
-            System.out.println(res);
-
+        System.out.println(resStack.size());
+        while(!resStack.isEmpty())
+            System.out.println(resStack.pop());
     }
 }
