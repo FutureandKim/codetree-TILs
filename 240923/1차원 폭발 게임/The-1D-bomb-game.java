@@ -1,42 +1,51 @@
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        Stack<int[]> bombStack = new Stack<>();
-        
+        ArrayList<Integer> bombList = new ArrayList<>();
+
         for (int i = 0; i < n; i++) {
-            int num = sc.nextInt();
+            bombList.add(sc.nextInt());
+        }
 
-            if (!bombStack.isEmpty() && bombStack.peek()[0] == num) {
-                bombStack.peek()[1]++;
-            } else {
-                bombStack.push(new int[]{num, 1});
-            }
+        boolean exploded;
+        do {
+            exploded = false;
+            ArrayList<Integer> tempList = new ArrayList<>();
+            int i = 0;
 
-            if (bombStack.peek()[1] >= m) {
-                bombStack.pop();
+            while (i < bombList.size()) {
+                int current = bombList.get(i);
+                int count = 1;
+                int j = i + 1;
 
-                while (!bombStack.isEmpty() && bombStack.peek()[1] >= m) {
-                    bombStack.pop();
+                while (j < bombList.size() && bombList.get(j) == current) {
+                    count++;
+                    j++;
                 }
-            }
-        }
 
-        Stack<Integer> resStack = new Stack<>();
-        while (!bombStack.isEmpty()) {
-            int[] pair = bombStack.pop();
-            for (int i = 0; i < pair[1]; i++) {
-                resStack.push(pair[0]);
-            }
-        }
+                if (count >= m) {
+                    exploded = true; // 폭발 발생
+                } else {
+                    for (int k = i; k < j; k++) {
+                        tempList.add(bombList.get(k));
+                    }
+                }
 
-        System.out.println(resStack.size());
-        while (!resStack.isEmpty()) {
-            System.out.println(resStack.pop());
+                i = j; // 다음 그룹으로 이동
+            }
+
+            bombList = tempList; // 남은 폭탄 리스트 업데이트
+
+        } while (exploded); // 더 이상 폭발이 없을 때까지 반복
+
+        System.out.println(bombList.size());
+        for (int num : bombList) {
+            System.out.println(num);
         }
     }
 }
