@@ -28,7 +28,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        // 아름다운 수 개수
         System.out.println(countBeautifulNumbers(n));
     }
 }
