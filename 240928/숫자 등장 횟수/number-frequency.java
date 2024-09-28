@@ -25,7 +25,7 @@ public class Main {
             if(hashNum.containsKey(num)){
                 System.out.print(hashNum.get(num) + " ");
             } else {
-                System.out.print(0);
+                System.out.print("0 ");
             }
         }
     }
