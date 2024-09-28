@@ -11,6 +11,7 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             String str = sc.next();
+            
             if(arrHash.containsKey(str)){
                 int strNum = arrHash.get(str);
                 arrHash.put(str, strNum+1);
@@ -18,8 +19,7 @@ public class Main {
                 arrHash.put(str, 1);
             }
 
-            if(arrHash.get(str) > max)
-                max = arrHash.get(str);
+            max = Math.max(max, arrHash.get(str));
         }
 
         System.out.print(max);
