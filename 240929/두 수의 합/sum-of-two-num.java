@@ -8,24 +8,16 @@ public class Main {
         int k = sc.nextInt();
         HashMap<Integer, Integer> intHash = new HashMap<>();
 
+        int cnt = 0;
         for(int i = 0; i < n; i++){
             int num = sc.nextInt();
-            intHash.put(i, num);
-        }
-
-        System.out.print(nC2(intHash, k));
-
-    }
-
-    public static <K, V> int nC2(HashMap<Integer, Integer> intHash, int k) {
-        int cnt = 0;
-        for(int i = 0; i < intHash.size(); i++){
-            for(int j = i+1; j < intHash.size(); j++){
-                int res1 = intHash.get(i);
-                int res2 = intHash.get(j);
-                if(k == (res1+res2)) cnt++;
+            
+            if(intHash.containsKey(k-num)){
+                cnt += intHash.get(k-num);
             }
+
+            intHash.put(num, intHash.getOrDefault(num, 0)+1);
         }
-        return cnt;
+        System.out.print(cnt);
     }
 }
