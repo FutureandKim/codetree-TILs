@@ -8,8 +8,7 @@ public class Main {
         HashMap<Character, Integer> charHash = new HashMap<>();
 
         for(int i = 0; i < strLen; i++){
-            int cnt = charHash.getOrDefault(str.charAt(i), 0);
-            charHash.put(str.charAt(i), cnt + 1);
+            charHash.put(str.charAt(i), charHash.getOrDefault(str.charAt(i), 0) + 1);
         }
 
         boolean foundChar = false;
