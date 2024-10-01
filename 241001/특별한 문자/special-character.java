@@ -12,7 +12,8 @@ public class Main {
         }
 
         boolean foundChar = false;
-        for(char c : charHash.keySet()){
+        for(int i = 0; i < strLen; i++){
+            char c = str.charAt(i);
             if(charHash.get(c) == 1){
                 System.out.print(c);
                 foundChar = true;
