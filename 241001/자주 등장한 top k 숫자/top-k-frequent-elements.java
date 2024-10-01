@@ -9,7 +9,7 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             int num = sc.nextInt();
-            intHash.put(num, intHash.getOrDefault(num, 1) + 1);
+            intHash.put(num, intHash.getOrDefault(num, 0) + 1);
         }
 
         List<Map.Entry<Integer, Integer>> resList = new ArrayList<>(intHash.entrySet());
