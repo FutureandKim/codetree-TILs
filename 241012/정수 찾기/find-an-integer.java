@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         HashSet<Integer> a = new HashSet<>();
-        HashSet<Integer> b = new HashSet<>();
 
         int aLen = sc.nextInt();
         for(int i = 0; i < aLen; i++){
